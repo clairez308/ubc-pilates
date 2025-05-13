@@ -3,11 +3,24 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+
+  /* UBC Pilates Club color palette (based on Instagram) */
+  --color-skyblue: #c5e4f4;
+  --color-denim: #74a7d9;
+  --color-aqua: #d2f3f1;
+  --color-navy: #224e70;
+  --color-lightyellow: #fef6ac;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-skyblue: var(--color-skyblue);
+  --color-denim: var(--color-denim);
+  --color-aqua: var(--color-aqua);
+  --color-navy: var(--color-navy);
+  --color-lightyellow: var(--color-lightyellow);
+
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
