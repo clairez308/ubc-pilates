@@ -84,7 +84,7 @@ const Hero = () => {
               className="relative aspect-square rounded-2xl overflow-hidden shadow-xl"
             >
               <Image
-                src="/group/pilatesmain.jpg"
+                src="/group/pilates5.jpg"
                 alt="Group Pilates Class"
                 fill
                 className="object-cover"
@@ -213,10 +213,10 @@ const Hero = () => {
         </p>
         <Link
           href="/prices"
-          className="inline-block bg-lightyellow hover:bg-skyblue text-navy font-bold py-4 px-8 rounded-full text-lg transition-colors shadow-lg"
+          className="relative inline-block bg-lightyellow text-navy font-bold py-4 px-8 rounded-full text-lg transition-colors duration-300 hover:bg-[#3d98c6] hover:text-white shadow-lg overflow-hidden"
         >
-            <span className="relative z-10">Get Started Today</span>
-            <span className="absolute inset-0 bg-gradient-to-r from-[#3d98c6] to-[#a7d8f0] opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
+          <span className="relative z-10">Get Started Today</span>
+          <span className="absolute inset-0 opacity-0 hover:opacity-100 transition-opacity duration-300 bg-gradient-to-r from-[#3d98c6] to-[#a7d8f0] z-0 rounded-full"></span>
         </Link>
       </motion.div>
     </div>
