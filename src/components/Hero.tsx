@@ -90,7 +90,7 @@ const Hero = () => {
                 className="object-cover"
                 priority
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#3d98c6]/30 to-[#e0f4ff]/20"></div>
+              <div className="absolute inset-0"></div>
             </motion.div>
           </div>
         </div>
@@ -212,10 +212,11 @@ const Hero = () => {
           yourself!
         </p>
         <Link
-          href="https://www.bouncelife.com/events/66d0eed7baf83fa99377a441"
+          href="/prices"
           className="inline-block bg-lightyellow hover:bg-skyblue text-navy font-bold py-4 px-8 rounded-full text-lg transition-colors shadow-lg"
         >
-          Get Started Today
+            <span className="relative z-10">Get Started Today</span>
+            <span className="absolute inset-0 bg-gradient-to-r from-[#3d98c6] to-[#a7d8f0] opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
         </Link>
       </motion.div>
     </div>
