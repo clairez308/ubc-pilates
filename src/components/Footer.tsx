@@ -1,20 +1,32 @@
 import Image from "next/image";
 
 export default function Footer() {
+  const socialLinks = {
+    tiktok: "https://www.tiktok.com/@ubcpilatesclub",
+    insta: "https://www.instagram.com/ubcpilatesclub",
+    facebook: "https://www.facebook.com/ubcpilatesclub",
+    youtube: "https://www.youtube.com/@ubcpilatesclub",
+    linkedin: "https://www.linkedin.com/in/ubcpilatesclub",
+  };
+
   return (
     <footer className="bg-[#B3DDF2] text-center py-8 text-sm text-navy">
       <div className="flex justify-center gap-4 mb-4">
-        {["tiktok", "insta", "facebook", "youtube", "linkedin"].map(
-          (platform) => (
+        {Object.entries(socialLinks).map(([platform, url]) => (
+          <a
+            key={platform}
+            href={url}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <Image
-              key={platform}
               src={`/${platform}.avif`}
               alt={platform}
               width={30}
               height={30}
             />
-          )
-        )}
+          </a>
+        ))}
       </div>
       <div className="space-y-1">
         <p>ubcpilatesclub@gmail.com</p>
