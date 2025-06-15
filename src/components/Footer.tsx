@@ -5,8 +5,8 @@ export default function Footer() {
     tiktok: "https://www.tiktok.com/@ubcpilatesclub",
     insta: "https://www.instagram.com/ubcpilatesclub",
     facebook: "https://www.facebook.com/ubcpilatesclub",
-    youtube: "https://www.youtube.com/@ubcpilatesclub",
-    linkedin: "https://www.linkedin.com/in/ubcpilatesclub",
+    youtube: "https://www.youtube.com/channel/UCUu2kA1LHuHkwjaYiEq6NzA",
+    linkedin: "https://www.linkedin.com/company/ams-pilates-club-at-ubc/?fbclid=IwAR0IDxNpmCAypn1e-174WHoNaCSXx0zk6TRLCFXgijGNBqoXn4meI1bYdk0",
   };
 
   return (

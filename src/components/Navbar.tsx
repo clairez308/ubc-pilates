@@ -52,7 +52,7 @@ const Navbar = () => {
                   href={menu.link}
                   className={isActive 
                     ? "m-2 text-denim font-bold underline underline-offset-4" 
-                    : "m-2 hover:text-denim transition-colors duration-300"
+                    : "m-2 text-black hover:text-denim transition-colors duration-300"
                   }
                 >
                   {menu.name}
