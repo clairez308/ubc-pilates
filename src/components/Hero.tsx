@@ -3,95 +3,55 @@
 import { motion } from "framer-motion";
 import React from "react";
 import Link from "next/link";
-import Image from "next/image";
+// import Image from "next/image";
 
 const Hero = () => {
   return (
-    <div className="relative bg-white overflow-hidden">
-      {/* Animated Background Elements */}
-      <div className="absolute inset-0 overflow-hidden">
-        {[...Array(10)].map((_, i) => (
-          <motion.div
-            key={i}
-            className="absolute rounded-full bg-aqua/20"
-            style={{
-              width: Math.random() * 200 + 50,
-              height: Math.random() * 200 + 50,
-              left: `${Math.random() * 100}%`,
-              top: `${Math.random() * 100}%`,
-            }}
-            animate={{
-              y: [0, Math.random() * 100 - 50],
-              x: [0, Math.random() * 100 - 50],
-              opacity: [0.1, 0.3, 0.1],
-            }}
-            transition={{
-              duration: Math.random() * 10 + 10,
-              repeat: Infinity,
-              repeatType: "reverse",
-            }}
-          />
-        ))}
-      </div>
+    <div className="relative bg-gradient-to-br from-slate-50 to-blue-50 overflow-hidden min-h-screen">
+      {/* Main Hero Section */}
+      <div className="relative z-10">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="pt-20 pb-16">
+            {/* Hero Content */}
+            <div className="text-center mb-16">
+              <h1 className="text-6xl md:text-7xl lg:text-8xl font-extrabold mb-6 bg-gradient-to-r text-[#4EC1DA] leading-tight drop-shadow-lg">
+                UBC
+                <br />
+                Pilates Club
+              </h1>
+              <p className="text-xl md:text-2xl text-navy-300 max-w-2xl mx-auto mb-8">
+                POP Pilates classes designed for students, by students.
+              </p>
 
-      {/* Hero Section */}
-      <div className="relative max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="py-24 md:py-32 flex flex-col md:flex-row items-center gap-12">
-          <div className="md:w-1/2">
-            <motion.h2
-              className="text-5xl md:text-6xl font-bold mb-6 text-[#3d98c6] text-shadow-lg text-shadow-skyblue"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-            >
-              Welcome to UBC Pilates Club!
-            </motion.h2>
-            <motion.p
-              className="text-xl md:text-2xl mb-8 font-medium text-[#3d98c6]"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 0.3, duration: 0.6 }}
-            >
-              ~ POP pilates for everyone ~
-            </motion.p>
-            <motion.div
-              className="flex flex-wrap gap-4"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 0.6, duration: 0.6 }}
-            >
-              <Link
-                href="/calendar"
-                className="relative overflow-hidden group bg-[#3d98c6] text-white font-medium py-3 px-6 rounded-full hover:bg-[#2d7597] transition-colors duration-300"
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.4, duration: 0.6 }}
+                className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12"
               >
-                <span className="relative z-10">View Schedule</span>
-                <span className="absolute inset-0 bg-gradient-to-r from-[#3d98c6] to-[#a7d8f0] opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
-              </Link>
-              <Link
-                href="/prices"
-                className="relative overflow-hidden group bg-white text-[#3d98c6] font-medium py-3 px-6 rounded-full border-2 border-[#3d98c6] hover:text-white transition-colors duration-300"
-              >
-                <span className="relative z-10">Membership Options</span>
-                <span className="absolute inset-0 bg-[#3d98c6] opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
-              </Link>
-            </motion.div>
-          </div>
-          <div className="md:w-1/2">
-            <motion.div
-              initial={{ opacity: 0, scale: 0.9 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.6 }}
-              className="relative aspect-square rounded-2xl overflow-hidden shadow-xl"
-            >
-              <Image
-                src="/group/pilates5.jpg"
-                alt="Group Pilates Class"
-                fill
-                className="object-cover"
-                priority
-              />
-              <div className="absolute inset-0"></div>
-            </motion.div>
+                <Link href="/calendar">
+                  <motion.button
+                    whileHover={{
+                      scale: 1.05,
+                      boxShadow: "0 20px 40px rgba(6, 182, 212, 0.3)",
+                    }}
+                    whileTap={{ scale: 0.95 }}
+                    className="bg-gradient-to-r from-[#a1f3ed] to-[#3880c8] text-white font-bold py-4 px-8 rounded-full text-lg shadow-xl hover:shadow-2xl transition-all duration-300 min-w-48"
+                  >
+                    View Classes
+                  </motion.button>
+                </Link>
+                <Link href="/prices">
+                  <motion.button
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
+                    className="bg-white text-navy font-bold py-4 px-8 rounded-full text-lg border-2 border-cyan-500 hover:bg-cyan-50 transition-all duration-300 min-w-48"
+                  >
+                    Membership Options
+                  </motion.button>
+                </Link>
+              </motion.div>
+            </div>
           </div>
         </div>
       </div>
@@ -99,15 +59,20 @@ const Hero = () => {
       {/* Features Section */}
       <div className="relative py-20 bg-[#e0f4ff] rounded-t-3xl shadow-lg">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.h2
-            className="text-4xl font-bold text-center mb-16 text-[#3d98c6]"
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
+            className="text-center mb-16"
           >
-            Why Choose UBC Pilates Club?
-          </motion.h2>
+            <h2 className="text-4xl md:text-5xl font-black text-navy mb-4">
+              Why Students Choose Us
+            </h2>
+            <p className="text-xl text-slate-600 max-w-2xl mx-auto">
+              Building UBC&#39;s strongest wellness community
+            </p>
+          </motion.div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {[
@@ -165,39 +130,50 @@ const Hero = () => {
       {/* Image Gallery Section */}
       <div className="py-16 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-center mb-12 text-[#3d98c6]">
-            Our Community
+          <h2 className="text-center text-4xl md:text-5xl font-black text-navy mb-4">
+            Our Community in Action
           </h2>
-
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
-            {[
-              "/group/pilates1.jpg",
-              "/group/pilates2.jpg",
-              "/group/pilates3.jpg",
-              "/group/pilates4.jpg",
-              "/group/pilates5.jpg",
-              "/group/pilates6.jpg",
-            ].map((src, index) => (
-              <motion.div
-                key={index}
-                className="relative aspect-square rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300"
-                whileHover={{ scale: 1.03 }}
-              >
-                <Image
-                  src={src}
-                  alt={`Pilates class ${index + 1}`}
-                  fill
-                  className="object-cover"
-                />
-                <div className="absolute inset-0 bg-[#3d98c6]/20 hover:bg-transparent transition-colors duration-300"></div>
-              </motion.div>
-            ))}
-          </div>
+          <div className="sk-instagram-feed" data-embed-id="25572573"></div>
+          <script
+            src="https://widgets.sociablekit.com/instagram-feed/widget.js"
+            defer
+          ></script>
         </div>
       </div>
 
       {/* Final CTA */}
-      <motion.div
+      <div className="relative py-20 overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-r from-skyblue via-denim to-skyblue"></div>
+        <div className="absolute inset-0 bg-black/10"></div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8 }}
+          className="relative z-10 max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8"
+        >
+          <h2 className="text-5xl md:text-6xl font-black text-white mb-6">
+            Ready to Get Started?
+          </h2>
+          <p className="text-xl md:text-2xl text-cyan-100 mb-10 max-w-2xl mx-auto leading-relaxed">
+            Join us for a class and experience the benefits of Pilates!
+          </p>
+
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link href="/prices">
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="bg-white text-cyan-600 font-bold py-4 px-8 rounded-full text-lg shadow-2xl hover:shadow-white/20 transition-all duration-300 min-w-48"
+              >
+                Get Started
+              </motion.button>
+            </Link>
+          </div>
+        </motion.div>
+      </div>
+      {/* <motion.div
         className="max-w-4xl mx-auto bg-[#e0f4ff] text-[#3d98c6] p-12 rounded-2xl text-center mb-10"
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -218,7 +194,7 @@ const Hero = () => {
           <span className="relative z-10">Get Started Today</span>
           <span className="absolute inset-0 opacity-0 hover:opacity-100 transition-opacity duration-300 bg-gradient-to-r from-[#3d98c6] to-[#a7d8f0] z-0 rounded-full"></span>
         </Link>
-      </motion.div>
+      </motion.div> */}
     </div>
   );
 };
