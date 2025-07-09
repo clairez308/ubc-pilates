@@ -19,7 +19,7 @@ const Hero = () => {
                 <br />
                 Pilates Club
               </h1>
-              <p className="text-xl md:text-2xl text-navy-300 max-w-2xl mx-auto mb-8">
+              <p className="text-xl md:text-2xl text-navy max-w-2xl mx-auto mb-8">
                 POP Pilates classes designed for students, by students.
               </p>
 
