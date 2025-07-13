@@ -4,7 +4,6 @@
   --background: #ffffff;
   --foreground: #171717;
 
-  /* UBC Pilates Club color palette (based on Instagram) */
   --color-skyblue: #c5e4f4;
   --color-denim: #74a7d9;
   --color-aqua: #d2f3f1;
@@ -25,15 +24,25 @@
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
 body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Enables 3D flip effects */
+.perspective {
+  perspective: 1000px;
+}
+
+.backface-hidden {
+  backface-visibility: hidden;
+}
+
+.rotate-y-180 {
+  transform: rotateY(180deg);
+}
+
+.transform-style {
+  transform-style: preserve-3d;
 }
