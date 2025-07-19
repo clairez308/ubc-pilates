@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /api/
+Sitemap: https://ubcpilates.club/sitemap.xml
+
+Crawl-delay: 1
