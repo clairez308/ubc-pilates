@@ -46,3 +46,32 @@ body {
 .transform-style {
   transform-style: preserve-3d;
 }
+
+/* Critical CSS optimizations */
+.sk-instagram-feed {
+    /* Prevent layout shift */
+    min-height: 400px;
+    background: #f8f9fa;
+  }
+  
+  /* Optimize font loading */
+  @font-face {
+    font-family: 'Geist';
+    font-display: swap;
+  }
+  
+  /* Reduce cumulative layout shift */
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  /* Optimize animations for mobile */
+  @media (prefers-reduced-motion: reduce) {
+    * {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+

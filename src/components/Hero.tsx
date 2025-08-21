@@ -3,79 +3,31 @@
 import { motion } from "framer-motion";
 import React, {useEffect} from "react";
 import Link from "next/link";
-import Head from "next/head";
 
 const Hero = () => {
   useEffect(() => {
-    // Load Instagram widget script after component mounts
-    const script = document.createElement("script");
-    script.src = "https://widgets.sociablekit.com/instagram-feed/widget.js";
-    script.defer = true;
-    document.head.appendChild(script);
-
-    return () => {
-      // Cleanup script if component unmounts
-      const existingScript = document.querySelector(
-        'script[src="https://widgets.sociablekit.com/instagram-feed/widget.js"]'
-      );
-      if (existingScript) {
-        document.head.removeChild(existingScript);
-      }
-    };
+    const loadInstagramWidget = () => {
+        const script = document.createElement("script");
+        script.src = "https://widgets.sociablekit.com/instagram-feed/widget.js";
+        script.defer = true;
+        document.head.appendChild(script);
+      };
+    
+      // Load after a short delay to prioritize critical content
+      const timer = setTimeout(loadInstagramWidget, 1000);
+    
+      return () => {
+        clearTimeout(timer);
+        const existingScript = document.querySelector(
+          'script[src="https://widgets.sociablekit.com/instagram-feed/widget.js"]'
+        );
+        if (existingScript) {
+          document.head.removeChild(existingScript);
+        }
+      };
   }, []);
   return (
     <>
-      {/* SEO Meta Tags */}
-      <Head>
-        <title>UBC Pilates Club</title>
-        <meta
-          name="description"
-          content="Join UBC Pilates Club for affordable, student-focused POP Pilates classes. Build strength, flexibility, and connect with UBC's wellness community. All experience levels welcome!"
-        />
-        <meta
-          name="keywords"
-          content="UBC Pilates, UBC Pilates club, student pilates classes, POP Pilates, UBC fitness, Vancouver pilates, affordable pilates, student wellness"
-        />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="canonical" href="https://ubcpilates.club" />
-
-        {/* Open Graph Meta Tags */}
-        <meta property="og:title" content="UBC Pilates Club" />
-        <meta
-          property="og:description"
-          content="Join UBC Pilates Club for affordable, student-focused POP Pilates classes. Build strength, flexibility, and connect with UBC's wellness community."
-        />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://ubcpilates.club" />
-        <meta
-          property="og:image"
-          content="https://ubcpilates.club/og-image.jpg"
-        />
-
-        {/* Local Business Schema */}
-        <script type="application/ld+json">
-          {JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "LocalBusiness",
-            name: "UBC Pilates Club",
-            description: "Student-focused POP Pilates classes at UBC",
-            url: "https://ubcpilates.club",
-            address: {
-              "@type": "PostalAddress",
-              addressLocality: "Vancouver",
-              addressRegion: "BC",
-              addressCountry: "CA",
-            },
-            sameAs: [
-              "https://www.instagram.com/ubcpilatesclub/",
-              "https://www.facebook.com/ubcpilatesclub",
-              "https://www.tiktok.com/@ubcpilatesclub",
-              "https://www.linkedin.com/company/ams-pilates-club-at-ubc/?fbclid=IwAR0IDxNpmCAypn1e-174WHoNaCSXx0zk6TRLCFXgijGNBqoXn4meI1bYdk0",
-              "https://www.youtube.com/channel/UCUu2kA1LHuHkwjaYiEq6NzA",
-            ],
-          })}
-        </script>
-      </Head>
 
       <div className="relative bg-gradient-to-br from-slate-50 to-blue-50 overflow-hidden min-h-screen">
         {/* Main Hero Section */}

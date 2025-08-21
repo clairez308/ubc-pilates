@@ -80,6 +80,9 @@ const Navbar = () => {
               <button
                 onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
                 className="lg:hidden p-2 rounded-lg hover:bg-gray-100 transition-colors duration-200"
+                aria-label ="Toggle mobile menu"
+                aria-labelledby="mobile-menu-button"
+                role="presentation"
               >
                 <div className="w-6 h-6 flex flex-col justify-center items-center">
                   <span className="w-5 h-0.5 bg-slate-600 block transition-all origin-center" />
