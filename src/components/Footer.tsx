@@ -82,6 +82,31 @@ const Footer = () => {
             >
               <div className="max-w-md mx-auto text-center lg:text-left lg:mx-0">
                 <h4 className="text-lg font-bold text-white mb-4">
+                  Subscribe to our Newsletter!
+                </h4>
+                <p className="text-slate-300 mb-4">
+                  Get the latest news about our classes and events!!
+                </p>
+                <a
+                  href="https://forms.gle/B1tJAyRZMk7cyghg7"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-block px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:shadow-lg transition-all duration-300"
+                >
+                  Sign Up via Google Form
+                </a>
+              </div>
+            </motion.div>
+
+            {/* <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.3 }}
+            >
+                
+              <div className="max-w-md mx-auto text-center lg:text-left lg:mx-0">
+                <h4 className="text-lg font-bold text-white mb-4">
                   Stay Updated
                 </h4>
                 <p className="text-slate-300 mb-4">
@@ -102,7 +127,7 @@ const Footer = () => {
                   </motion.button>
                 </div>
               </div>
-            </motion.div>
+            </motion.div> */}
           </div>
         </div>
 

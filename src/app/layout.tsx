@@ -20,10 +20,10 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
     title: {
-      default: "UBC Pilates Club - Student POP Pilates Classes Vancouver",
+      default: "UBC Pilates Club",
       template: "%s | UBC Pilates Club"
     },
-    description: "Join UBC Pilates Club for affordable POP Pilates classes designed by students, for students. Build strength & flexibility with Vancouver's top student wellness community. All levels welcome!",
+    description: "POP Pilates classes designed for students, by students. All levels welcome!",
     keywords: [
       "UBC Pilates", "UBC Pilates club", "student pilates Vancouver", 
       "POP Pilates UBC", "UBC fitness club", "Vancouver student pilates", 
@@ -38,8 +38,8 @@ export const metadata: Metadata = {
       canonical: 'https://ubcpilates.club',
     },
     openGraph: {
-      title: 'UBC Pilates Club - Student POP Pilates Classes Vancouver',
-      description: 'Join UBC Pilates Club for affordable POP Pilates classes designed by students, for students. Build strength & flexibility with Vancouver\'s top student wellness community.',
+      title: 'UBC Pilates Club',
+      description: 'POP Pilates classes designed for students, by students. All levels welcome!',
       type: 'website',
       locale: 'en_CA',
       url: 'https://ubcpilates.club',
@@ -49,14 +49,14 @@ export const metadata: Metadata = {
           url: '/og-image.jpg',
           width: 1200,
           height: 630,
-          alt: 'UBC Pilates Club - Student POP Pilates Classes'
+          alt: 'UBC Pilates Club'
         }
       ],
     },
     twitter: {
       card: 'summary_large_image',
-      title: 'UBC Pilates Club - Student POP Pilates Classes Vancouver',
-      description: 'Join UBC Pilates Club for affordable POP Pilates classes designed by students, for students.',
+      title: 'UBC Pilates Club',
+      description: 'POP Pilates classes designed for students, by students. All levels welcome!',
       images: ['/og-image.jpg'],
     },
     robots: {
@@ -71,7 +71,7 @@ export const metadata: Metadata = {
       },
     },
     verification: {
-      google: 'google-site-verification=IiajsL8gRNNiym3U5Sm2cvt4NaFk7psDhoonndYwsvw', // Add your Google Search Console verification
+      google: 'google-site-verification=IiajsL8gRNNiym3U5Sm2cvt4NaFk7psDhoonndYwsvw',
     },
   };
 
@@ -92,7 +92,7 @@ export default function RootLayout({
               "@type": ["LocalBusiness", "SportsClub"],
               name: "UBC Pilates Club",
               description:
-                "Student-focused POP Pilates classes at University of British Columbia",
+                "POP Pilates classes designed for students, by students. All levels welcome!",
               url: "https://ubcpilates.club",
               email: "ubcpilatesclub@gmail.com",
               address: {

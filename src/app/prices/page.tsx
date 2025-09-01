@@ -34,6 +34,12 @@ export default function PricesPage() {
         >
           Payment can be made in-person (cash/credit) or through Bounce.
         </motion.p>
+        <Link
+          href="https://www.bouncelife.com/organizations/66e09dfa67d86b2c13b88831?membership-required=false"
+          className="inline-block max-w-xs w-full text-center bg-denim hover:bg-navy text-white font-medium text-sm sm:text-base py-2 sm:py-3 px-4 sm:px-6 rounded-full transition-colors mt-5 mx-auto"
+        >
+          Go Premium
+        </Link>
       </div>
 
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -52,19 +58,17 @@ export default function PricesPage() {
             <div className="space-y-6">
               <div className="bg-white p-4 rounded-lg shadow-sm">
                 <h4 className="font-bold text-lg mb-1">Non Member</h4>
-                <p className="text-denim">$6 per class</p>
+                <p className="text-denim">$10 per class</p>
               </div>
               <div className="bg-white p-4 rounded-lg shadow-sm">
                 <h4 className="font-bold text-lg mb-1">Regular Member</h4>
-                <p className="text-denim">$3 per class</p>
+                <p className="text-denim">$5 per class</p>
+              </div>
+              <div className="bg-white p-4 rounded-lg shadow-sm">
+                <h4 className="font-bold text-lg mb-1">Premium Member</h4>
+                <p className="text-denim">All inclusive</p>
               </div>
             </div>
-            <Link
-              href="https://www.bouncelife.com/events/66d0eed7baf83fa99377a441"
-              className="block text-center bg-denim hover:bg-navy text-white font-medium py-3 px-6 rounded-full transition-colors mt-10"
-            >
-              Go Premium
-            </Link>
           </motion.div>
 
           {/* Membership */}
@@ -80,23 +84,22 @@ export default function PricesPage() {
             </h3>
             <div className="space-y-6">
               <div className="bg-white p-4 rounded-lg shadow-sm">
+                <h4 className="font-bold text-lg mb-1">Regular Year</h4>
+                <p className="text-denim">$35 per year</p>
+              </div>
+              <div className="bg-white p-4 rounded-lg shadow-sm">
                 <h4 className="font-bold text-lg mb-1">Regular Term</h4>
-                <p className="text-denim">$20 per term</p>
+                <p className="text-denim">$25 per term</p>
               </div>
               <div className="bg-white p-4 rounded-lg shadow-sm">
                 <h4 className="font-bold text-lg mb-1">Regular Year</h4>
-                <p className="text-denim">$25 per year</p>
+                <p className="text-denim">$65 per year</p>
               </div>
-              <div className="text-center text-sm text-denim italic">
-                *additional $3 per class
+              <div className="bg-white p-4 rounded-lg shadow-sm">
+                <h4 className="font-bold text-lg mb-1">Regular Term</h4>
+                <p className="text-denim">$45 per team</p>
               </div>
             </div>
-            <Link
-              href="https://www.bouncelife.com/events/66d0eed7baf83fa99377a441"
-              className="block text-center bg-denim hover:bg-navy text-white font-medium py-3 px-6 rounded-full transition-colors mt-5"
-            >
-              Go Premium
-            </Link>
           </motion.div>
         </div>
       </div>
@@ -154,9 +157,7 @@ export default function PricesPage() {
             transition={{ duration: 0.6, delay: 0.2 }}
           >
             <div className="flex items-start mb-4">
-              <h3 className="text-xl font-bold text-navy">
-                First Class Free
-              </h3>
+              <h3 className="text-xl font-bold text-navy">First Class Free</h3>
             </div>
             <p className="text-gray-700">
               Everyone is welcome to attend their first UBC Pilates class
@@ -176,9 +177,7 @@ export default function PricesPage() {
             transition={{ duration: 0.6, delay: 0.6 }}
           >
             <div className="flex items-start mb-4">
-              <h3 className="text-xl font-bold text-navy">
-                Exclusive Access
-              </h3>
+              <h3 className="text-xl font-bold text-navy">Exclusive Access</h3>
             </div>
             <p className="text-gray-700 mb-2">Members enjoy:</p>
             <ul className="space-y-2">
