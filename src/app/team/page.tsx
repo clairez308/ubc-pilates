@@ -71,7 +71,7 @@ const teamMembers = [
     name: "Kira Gaebel",
     role: "VP Marketing",
     image: "/team/kira.png",
-    description: "Kira is a ",
+    description: "Hi, my name is Kira and I’m in my fourth year studying marketing. I started doing Pilates in my first year at UBC, and it has been such an important way for me to stay active and balanced throughout university. I joined UBC Pilates in May 2025, and this community has quickly become something very special and close to my heart.",
   },
   {
     name: "Annie Wu",
@@ -124,8 +124,8 @@ const teamMembers = [
   {
     name: "Yuly Topp",
     role: "VP External",
-    image: "/team/yuly.avif",
-    description: "Yuly is a ",
+    image: "/team/yuly.jpeg",
+    description: "I’m the VP of External and a third-year Social Work student. I love how Pilates strengthens both the body and mind. A fun fact about me is that I have a one eyed cat.",
   },
   {
     name: "Armita Bagheri",
