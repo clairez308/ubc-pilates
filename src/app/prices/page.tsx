@@ -191,8 +191,8 @@ export default function PricesPage() {
         </h2>
         <p className="mb-6">
           Discover the benefits of Pilates with our group classes! Our
-          instructors offer accessible classes for all levels; you'll have fun
-          whether you're beginner or advanced.
+          instructors offer accessible classes for all levels; you will have fun
+          whether you are beginner or advanced.
         </p>
 
         <div className="space-y-4">
