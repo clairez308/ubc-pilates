@@ -70,7 +70,7 @@ const teamMembers = [
   {
     name: "Kira Gaebel",
     role: "VP Marketing",
-    image: "/team/kira.avif",
+    image: "/team/kira.png",
     description: "Kira is a ",
   },
   {
@@ -82,8 +82,8 @@ const teamMembers = [
   {
     name: "Sanchi Shorewala",
     role: "Visual Media Director",
-    image: "/team/sanchi.avif",
-    description: "Sanchi is a ",
+    image: "/team/sanchi.jpeg",
+    description: "I'm a 3rd year Psych major who loves reading, sketching and cooking up a storm :)) Our UBC Pilates Club community means so much to me; I have made so many friends and memories that I will cherish forever, & I hope it can mean as much to you!!",
   },
   {
     name: "Jaden Gunn",
@@ -112,8 +112,8 @@ const teamMembers = [
   {
     name: "Taylor Chow",
     role: "Photographer",
-    image: "/team/taylor.avif",
-    description: "Taylor is a ",
+    image: "/team/taylor.jpg",
+    description: "Hi UBC Pilates Club! I am the executive photographer. I’m a 3rd year, majoring in Applied Animal Biology. I love Pilates because it’s both great exercise and it’s fun/flexible for all experience levels. A fun fact about me is that I work in films/TV. Keep an eye out for me on your TV screen! ",
   },
   {
     name: "Claire Zhang",
@@ -154,7 +154,7 @@ const teamMembers = [
   {
     name: "Fatima Mudassar",
     role: "VP Internal",
-    image: "/team/fatima.avif",
+    image: "/team/fatima.png",
     description: "Fatima is a ",
   },
   {
@@ -166,13 +166,13 @@ const teamMembers = [
   {
     name: "Pia",
     role: "AVP Internal",
-    image: "/team/pia.avif",
+    image: "/team/pia.png",
     description: "Pia is a ",
   },
   {
     name: "Lyle Lo",
     role: "VP Finance",
-    image: "/team/lyle.avif",
+    image: "/team/lyle.png",
     description: "Lyle is a ",
   },
   {

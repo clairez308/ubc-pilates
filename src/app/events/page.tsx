@@ -89,7 +89,7 @@ const events = [
     title: "Short N' Sweet Pilates",
     date: "November 25, 2024",
     image: "/group/sabrina.png",
-    description: "We’ll make you want to fall in love with the short n sweet themed class!!! 💎💎Where art thou?! Life 26! ❤️‍🔥❤️‍🔥Please please please stay in our good graces and get a taste of making your body the sharpest tool in the building!🎀💋☁️💌☕️☕️☕️☕️",
+    description: "We’ll make you want to fall in love with the short n sweet themed class!!! 💎💎Where art thou?! Life 26! ❤️‍🔥❤️‍🔥",
     featured: false,
   },
   {
@@ -102,10 +102,10 @@ const events = [
   },
   {
     id: 13,
-    title: "TBD",
-    date: "2025",
+    title: "Clubs Fair",
+    date: "September 23-24 2025",
     image: "/group/pilates5.jpg",
-    description: "TBD",
+    description: "Get to know UBC Pilates Club! Check out our booth to learn more about the club & how you can participate.",
     featured: true,
   },
   {
@@ -163,7 +163,7 @@ export default function EventsPage() {
               <img 
                 src={event.image} 
                 alt={event.title} 
-                className="w-full h-48 object-cover"
+                className="w-full h-64 object-cover"
               />
               <div className="p-4">
                 <h3 className="text-lg font-bold mb-1">{event.title}</h3>

@@ -12,9 +12,9 @@ export const metadata: Metadata = {
 
 export default function Home() {
   return (
-    <main>
-      <Hero />
-    </main>
+      <main>
+        <Hero />
+      </main>
   );
 }
 

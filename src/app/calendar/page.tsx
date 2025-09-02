@@ -47,13 +47,21 @@ export default function CalendarPage() {
   return (
     <div className="max-w-4xl mx-auto py-16 px-4">
       <motion.h2
-        className="text-4xl font-bold text-center mb-10 text-navy"
+        className="text-4xl font-bold text-center mb-5 text-navy"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.6 }}
       >
         Class Schedule
       </motion.h2>
+      <motion.p
+          className="text-sm text-center text-denim italic max-w-3xl mb-5 mx-auto mt-3"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.3, duration: 0.6 }}
+        >
+          All classes & physical membership cards are first come first serve.
+        </motion.p>
 
       {/* Calendar grid */}
       <div className="grid grid-cols-5 gap-1 mb-8">
@@ -123,14 +131,6 @@ export default function CalendarPage() {
             className="relative overflow-hidden group bg-white text-[#3d98c6] font-medium py-3 px-6 rounded-full border-2 border-[#3d98c6] hover:text-white transition-colors duration-300 w-48 text-center"
           >
             <span className="relative z-10">Purchase a Membership</span>
-            <span className="absolute inset-0 bg-[#3d98c6] opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
-          </Link>
-
-          <Link
-            href="https://docs.google.com/forms/d/e/1FAIpQLSeyluXoTO7Z26UAcifrruRJBz0HnJsJnm2N-F8vCcCZn2udXQ/viewform"
-            className="relative overflow-hidden group bg-white text-[#3d98c6] font-medium py-3 px-6 rounded-full border-2 border-[#3d98c6] hover:text-white transition-colors duration-300 w-48 text-center"
-          >
-            <span className="relative z-10">Book a Class</span>
             <span className="absolute inset-0 bg-[#3d98c6] opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
           </Link>
         </motion.div>

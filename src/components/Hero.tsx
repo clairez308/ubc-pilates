@@ -108,7 +108,7 @@ const Hero = () => {
                   icon: "🧘",
                   title: "Student-Focused Classes",
                   description:
-                    "Pilates classes designed to fit into busy student schedules",
+                    "Pilates classes designed to fit into your busy schedules!",
                   color: "bg-[#e0f4ff]",
                 },
                 {
@@ -121,14 +121,14 @@ const Hero = () => {
                   icon: "👥",
                   title: "UBC Community",
                   description:
-                    "Connect with other pilates enthusiasts and build friendships",
+                    "Connect with other pilates enthusiasts and build friendships 💙",
                   color: "bg-[#e0f4ff]",
                 },
                 {
                   icon: "🌍",
                   title: "Inclusive Environment",
                   description:
-                    "Accessible pilates classes for all experience levels at UBC",
+                    "Accessible pilates classes for all experience levels at UBC!",
                   color: "bg-[#e0f4ff]",
                 },
               ].map((feature, index) => (

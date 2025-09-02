@@ -40,6 +40,21 @@ export default function PricesPage() {
         >
           Go Premium
         </Link>
+        <motion.p
+          className="text-l font-bold text-navy max-w-3xl mx-auto mt-10"
+          initial={{ y: -20 }}
+          animate={{ y: [0, -10, 0] }}
+          transition={{
+            delay: 0.3,
+            duration: 0.6,
+            repeat: Infinity,
+            repeatType: "loop",
+            ease: "easeOut",
+          }}
+        >
+          LIMITED TIME OFFER: use code IMAGINE on bounce - only available on
+          Imagine Day
+        </motion.p>
       </div>
 
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -111,43 +126,6 @@ export default function PricesPage() {
         </h2>
 
         <div className="grid md:grid-cols-2 gap-8 mb-12">
-          {/* Raffle Section */}
-          <motion.div
-            className="bg-white p-6 rounded-xl shadow-md border-l-4 border-[#3d98c6]"
-            initial={{ opacity: 0, x: -20 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-          >
-            <div className="flex items-start mb-4">
-              <h3 className="text-xl font-bold text-navy">Term Raffles</h3>
-            </div>
-            <p className="text-gray-700 mb-4">
-              Becoming a member enters you into our end-of-term raffle! Attend{" "}
-              <Link
-                href="https://forms.gle/aweqsZV64EcN9hTR6"
-                className="underline text-[#3d98c6]"
-              >
-                and validate
-              </Link>{" "}
-              classes to validate entries:
-            </p>
-            <ul className="space-y-2">
-              <li className="flex items-start">
-                <CheckIcon color="text-[#3d98c6]" size="small" />
-                <span>Regular membership: 1 entry per term</span>
-              </li>
-              <li className="flex items-start">
-                <CheckIcon color="text-[#3d98c6]" size="small" />
-                <span>Premium membership: 2 entries per term</span>
-              </li>
-              <li className="flex items-start">
-                <CheckIcon color="text-[#3d98c6]" size="small" />
-                <span>Year memberships include entries each term</span>
-              </li>
-            </ul>
-          </motion.div>
-
           {/* First Class Free */}
           <motion.div
             className="bg-white p-6 rounded-xl shadow-md border-l-4 border-[#a7d8f0]"
@@ -162,12 +140,10 @@ export default function PricesPage() {
             <p className="text-gray-700">
               Everyone is welcome to attend their first UBC Pilates class
               absolutely free of charge! The only requirement is to enjoy
-              yourself :)
+              yourself :) (& make sure you snag your ticket on bounce first!)
             </p>
           </motion.div>
-        </div>
 
-        <div className="grid md:grid-cols-2 gap-8">
           {/* Members Access */}
           <motion.div
             className="bg-white p-6 rounded-xl shadow-md border-l-4 border-[#2d7597]"
@@ -191,7 +167,11 @@ export default function PricesPage() {
               </li>
               <li className="flex items-start">
                 <CheckIcon color="text-[#2d7597]" size="small" />
-                <span>Premium members get discounted club merch</span>
+                <span>Discounted club merch</span>
+              </li>
+              <li className="flex items-start">
+                <CheckIcon color="text-[#2d7597]" size="small" />
+                <span>Access to raffles, giveaways, and care packages</span>
               </li>
             </ul>
           </motion.div>
@@ -210,14 +190,14 @@ export default function PricesPage() {
           Group & Event Services
         </h2>
         <p className="mb-6">
-          Discover the benefits of Pilates with our specialized group sessions.
-          Our instructors offer personalized classes tailored to your needs,
-          whether you are beginner or advanced.
+          Discover the benefits of Pilates with our group classes! Our
+          instructors offer accessible classes for all levels; you'll have fun
+          whether you're beginner or advanced.
         </p>
 
         <div className="space-y-4">
           <Link
-            href="https://docs.google.com/forms/d/e/1FAIpQLSeU4U4LCGDPq6jefETDByrCBYWF0ud_VHqCN4iNjW07bvme1Q/viewform"
+            href="https://docs.google.com/forms/d/e/1FAIpQLSfTVGEi_BoXeMKp7DMAyj3ZDjWN6A0IYtMZXYgo_Yx3ul21fw/viewform"
             className="block bg-white hover:bg-gray-50 p-4 rounded-lg shadow-sm border border-aqua transition-colors"
           >
             <h3 className="font-bold text-denim mb-1">Mat Rental Request</h3>
@@ -227,7 +207,7 @@ export default function PricesPage() {
           </Link>
 
           <Link
-            href="https://docs.google.com/forms/d/e/1FAIpQLScwzRlK4pgdDxGIq0pk28jbZKTn3tTlAUnyFGu3mO4OlJwk1A/viewform"
+            href="https://docs.google.com/forms/d/e/1FAIpQLSf-ioKkSQ4269qy-nPsH4KkDnknirG32nJriGPEur7i2ZP5nw/viewform"
             className="block bg-white hover:bg-gray-50 p-4 rounded-lg shadow-sm border border-aqua transition-colors"
           >
             <h3 className="font-bold text-denim mb-1">Instructor Request</h3>
