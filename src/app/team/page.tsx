@@ -154,8 +154,8 @@ const teamMembers = [
   {
     name: "Fatima Mudassar",
     role: "VP Internal",
-    image: "/team/fatima.png",
-    description: "Fatima is a ",
+    image: "/team/fatima.jpeg",
+    description: "Hi! My name is Fatima Mudassar and I’m the VP Internal for the UBC Pilates Club. I’m in my third year studying Cognitive Systems. In my free time, I enjoy making art, hanging out with my dogs, and eating good food!",
   },
   {
     name: "Grace Kim",
