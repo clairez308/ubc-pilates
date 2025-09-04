@@ -16,7 +16,7 @@ const teamMembers = [
     role: "Co-President",
     image: "/team/vivian.avif",
     description:
-      "Meet Vivian, this club’s incredible VP External, whom you may occasionally catch playing Infinite Stairs on her phone. She is in her third year of psychology and cannot wait to begin pilates with the girlies! Vivian is quite the Blue Chip fan, as well. Here is one for the fruit lovers: “My favourite fruits are cherry tomatoes, guava and Granny Smiths!”",
+      "Meet Vivian, this club’s incredible Co-President, whom you may occasionally catch playing Infinite Stairs on her phone. She is in her third year of psychology and cannot wait to begin pilates with the girlies! Vivian is quite the Blue Chip fan, as well. Here is one for the fruit lovers: “My favourite fruits are cherry tomatoes, guava and Granny Smiths!”",
   },
   {
     name: "Mauli Sood",
@@ -172,8 +172,8 @@ const teamMembers = [
   {
     name: "Lyle Lo",
     role: "VP Finance",
-    image: "/team/lyle.png",
-    description: "Lyle is a ",
+    image: "/team/lyle.jpg",
+    description: "I compete in Long & Triple Jump for UBC!",
   },
   {
     name: "Elaina Fung",
