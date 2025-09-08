@@ -88,8 +88,8 @@ const teamMembers = [
   {
     name: "Jaden Gunn",
     role: "Social Media Director",
-    image: "/team/jaden.avif",
-    description: "Jaden is a ",
+    image: "/team/jaden.jpg",
+    description: "Hi! My name's Jaden, I'm going into my third year as psychology major. I'm so excited to be back with the club this year as a Social Media Director. Get ready for lots of trendy TikToks and even more fun content on our IG. Hit me up with any new food reccs and I'll see you in class!! ",
   },
   {
     name: "Nanami Kubo",
@@ -107,7 +107,7 @@ const teamMembers = [
     name: "Lucas Chan",
     role: "Videographer + Video Editor",
     image: "/team/lucas.avif",
-    description: "Lucas is a ",
+    description: "",
   },
   {
     name: "Taylor Chow",
@@ -167,7 +167,7 @@ const teamMembers = [
     name: "Pia",
     role: "AVP Internal",
     image: "/team/pia.png",
-    description: "Pia is a ",
+    description: "",
   },
   {
     name: "Lyle Lo",
