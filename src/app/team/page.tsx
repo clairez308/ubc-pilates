@@ -106,8 +106,8 @@ const teamMembers = [
   {
     name: "Lucas Chan",
     role: "Videographer + Video Editor",
-    image: "/team/lucas.avif",
-    description: "",
+    image: "/team/lucas.PNG",
+    description: "Hey! I'm Lucas and I'm the videographer/video editor for UBC Pilates. I'm in 3rd year biochemistry and I really enjoy doing videography and editing (who could've guessed🧐). Pilates has a great community so hope to see you at classes!",
   },
   {
     name: "Taylor Chow",
