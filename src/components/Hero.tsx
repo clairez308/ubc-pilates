@@ -51,7 +51,7 @@ const Hero = () => {
                   transition={{ delay: 0.4, duration: 0.6 }}
                   className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12"
                 >
-                  <Link
+                  {/* <Link
                     href="/calendar"
                     aria-label="View UBC Pilates class schedule"
                   >
@@ -65,7 +65,7 @@ const Hero = () => {
                     >
                       View Classes
                     </motion.button>
-                  </Link>
+                  </Link> */}
                   <Link
                     href="/prices"
                     aria-label="View UBC Pilates membership pricing"
