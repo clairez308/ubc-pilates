@@ -110,10 +110,10 @@ const events = [
   },
   {
     id: 14,
-    title: "TBD",
-    date: "2025",
+    title: "Bunny Pilates",
+    date: "Thursday, September 25, 2025; 12-3 PM (1hr x 3 sessions)",
     image: "/group/pilates1.jpg",
-    description: "TBD",
+    description: "Bunny Pilates is BACK!!! Come flow & stretch with the fluffiest workout buddies ever at the AMS Nest Performance Theatre 🐰✨ We’ve got 10 spots reserved for our members (make sure to grab your ticket through Bounce! 👀)",
     featured: true,
   },
 ];

@@ -67,8 +67,9 @@ const partners = [
     id: 8,
     name: "Gold's Gym",
     logo: "/sponsors/goldgym.avif",
-    featured: false,
-    link: "https://join.goldsgymbc.ca/?gclid=Cj0KCQjw6KunBhDxARIsAKFUGs9cdavd4MYf23QgeQhjy-vEfDJXa5oGJwF6goCPi5-_eWUueUMM8hEaApZgEALw_wcB",
+    desciption: "BC's top gym with the best equipment, amenities & personal trainers. Experience the best gym with Gold's Gym.",
+    featured: true,
+    link: "https://goldsgymbc.ca/",
   },
   {
     id: 9,
@@ -155,6 +156,47 @@ const partners = [
     description: "We’re more than a vitamin, supplement and health food store, we’re a lifestyle.",
     link: "https://www.bodyenergyclub.com/",
   },
+  {
+    id: 21,
+    name: "Rumble Boxing",
+    logo: "/sponsors/rumble.jpg",
+    featured: true,
+    description: "We’re more than a vitamin, supplement and health food store, we’re a lifestyle.",
+    link: "https://rumbleboxing.com/vancouver",
+  },
+  {
+    id: 22,
+    name: "Organika",
+    logo: "/sponsors/organika.png",
+    featured: true,
+    description: "We’re more than a vitamin, supplement and health food store, we’re a lifestyle.",
+    link: "https://organika.com/?srsltid=AfmBOorAz69cU69LBblxzCMIUo1payp17Z9FvNw1-MR26n5OTW274wFg",
+  },
+  {
+    id: 23,
+    name: "Heal",
+    logo: "/sponsors/heal.png",
+    featured: true,
+    description: "We’re more than a vitamin, supplement and health food store, we’re a lifestyle.",
+    link: "https://www.healwellness.ca/",
+  },
+  {
+    id: 24,
+    name: "Barry's",
+    logo: "/sponsors/barrys.png",
+    featured: true,
+    description: "Barry’s is the global destination to get the best workout of your life. We are dedicated to changing lives worldwide through our workouts and community.",
+    link: "https://www.barrys.com/pricing/vancouver/",
+  },
+  {
+    id: 25,
+    name: "Jaybird",
+    logo: "/sponsors/jaybird.png",
+    featured: true,
+    description: "Workouts that aim to have you feeling youself, on a deeper level.",
+    link: "https://www.jaybirdjaybird.com/",
+  },
+  
 ];
 
 export default function PartnershipsPage() {
