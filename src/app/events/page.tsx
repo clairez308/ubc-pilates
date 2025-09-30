@@ -4,16 +4,32 @@ import { motion } from "framer-motion";
 import React from "react";
 
 const events = [
+    {
+        id: 1,
+        title: "Bunny Pilates",
+        date: "Thursday, September 25, 2025; 12-3 PM (1hr x 3 sessions)",
+        image: "/group/bunnies.jpg",
+        description: "Bunny Pilates is BACK!!! Come flow & stretch with the fluffiest workout buddies ever at the AMS Nest Performance Theatre 🐰✨ We’ve got 10 spots reserved for our members (make sure to grab your ticket through Bounce! 👀)",
+        featured: false,
+      },
+      {
+        id: 2,
+        title: "Clubs Fair",
+        date: "September 23-24 2025",
+        image: "/group/pilates7.jpg",
+        description: "Get to know UBC Pilates Club! Check out our booth to learn more about the club & how you can participate.",
+        featured: false,
+      },
   {
-    id: 1,
+    id: 3,
     title: "UBC Pilates x XISC: International Themed Class",
     date: "March 28, 2025",
-    image: "/group/pilates4.jpg",
+    image: "/group/pilates8.JPG",
     description: "International & Exchange Collab with XISC - music, flags, and candy from around the world.",
     featured: false,
   },
   {
-    id: 2,
+    id: 4,
     title: "FIESTA",
     date: "March 27, 2025",
     image: "/group/pilates2.jpg",
@@ -21,7 +37,7 @@ const events = [
     featured: false,
   },
   {
-    id: 3,
+    id: 5,
     title: "UBC Pilates x Best Buddies: Spring Core & Slime",
     date: "March 20, 2025",
     image: "/group/slime.png",
@@ -29,7 +45,7 @@ const events = [
     featured: false,
   },
   {
-    id: 4,
+    id: 6,
     title: "K-POPilates",
     date: "March 18, 2025",
     image: "/group/kpop.png",
@@ -37,7 +53,7 @@ const events = [
     featured: false,
   },
   {
-    id: 5,
+    id: 7,
     title: "bunnies x pilates",
     date: "March 17, 2025",
     image: "/group/bunny.jpg",
@@ -45,7 +61,7 @@ const events = [
     featured: false,
   },
   {
-    id: 6,
+    id: 8,
     title: "UBC Muay Thai x Pilates: Women's History Month Event",
     date: "March 14, 2025",
     image: "/group/muaythai.jpeg",
@@ -53,7 +69,7 @@ const events = [
     featured: false,
   },
   {
-    id: 7,
+    id: 9,
     title: "UBC Pilates x SISU: Key chain making & Pilates session",
     date: "March 6, 2025",
     image: "/group/sisu.png",
@@ -61,7 +77,7 @@ const events = [
     featured: false,
   },
   {
-    id: 8,
+    id: 10,
     title: "Merry Makers Market",
     date: "December 4, 2024",
     image: "/group/merrymakers.png",
@@ -69,7 +85,7 @@ const events = [
     featured: false,
   },
   {
-    id: 9,
+    id: 11,
     title: "UBC Pilates x CSA: XMAS Core + Crafts",
     date: "December 6, 2024",
     image: "/group/xmas.png",
@@ -77,7 +93,7 @@ const events = [
     featured: false,
   },
   {
-    id: 10,
+    id: 12,
     title: "Taylor Swift & Lana Del Rey themed class",
     date: "November 29, 2024",
     image: "/group/taylor.jpg",
@@ -85,7 +101,7 @@ const events = [
     featured: false,
   },
   {
-    id: 11,
+    id: 13,
     title: "Short N' Sweet Pilates",
     date: "November 25, 2024",
     image: "/group/sabrina.png",
@@ -93,7 +109,7 @@ const events = [
     featured: false,
   },
   {
-    id: 12,
+    id: 14,
     title: "UBC Pilates x Get Thrifty: Wellness Event",
     date: "October 18, 2024",
     image: "/group/thrift.png",
@@ -101,21 +117,14 @@ const events = [
     featured: false,
   },
   {
-    id: 13,
-    title: "Clubs Fair",
-    date: "September 23-24 2025",
-    image: "/group/pilates5.jpg",
-    description: "Get to know UBC Pilates Club! Check out our booth to learn more about the club & how you can participate.",
-    featured: true,
-  },
-  {
-    id: 14,
-    title: "Bunny Pilates",
-    date: "Thursday, September 25, 2025; 12-3 PM (1hr x 3 sessions)",
+    id: 15,
+    title: "TBD",
+    date: "",
     image: "/group/pilates1.jpg",
-    description: "Bunny Pilates is BACK!!! Come flow & stretch with the fluffiest workout buddies ever at the AMS Nest Performance Theatre 🐰✨ We’ve got 10 spots reserved for our members (make sure to grab your ticket through Bounce! 👀)",
+    description: "Stay tuned for upcoming events!",
     featured: true,
   },
+  
 ];
 
 export default function EventsPage() {

@@ -13,7 +13,7 @@ const Navbar = () => {
   const menuItems = [
     { name: "Home", link: "/" },
     { name: "Prices", link: "/prices" },
-    // { name: "Calendar", link: "/calendar" },
+    { name: "Calendar", link: "/calendar" },
     { name: "Events", link: "/events" },
     { name: "FAQ", link: "/faq" },
     { name: "Team", link: "/team" },

@@ -40,79 +40,108 @@ export default function PricesPage() {
         >
           Go Premium
         </Link>
-        <motion.p
-          className="text-l font-bold text-navy max-w-3xl mx-auto mt-10"
-          initial={{ y: -20 }}
-          animate={{ y: [0, -10, 0] }}
-          transition={{
-            delay: 0.3,
-            duration: 0.6,
-            repeat: Infinity,
-            repeatType: "loop",
-            ease: "easeOut",
-          }}
-        >
-          LIMITED TIME OFFER: use code IMAGINE on bounce - only available on
-          Imagine Day
-        </motion.p>
       </div>
 
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid md:grid-cols-2 gap-8 mb-12">
-          {/* Per Class Fee */}
+          {/* No Membership */}
           <motion.div
             className="bg-skyblue/10 p-8 rounded-xl border-2 border-denim"
-            initial={{ opacity: 0, x: -20 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
             <h3 className="text-2xl font-bold text-center mb-6 text-navy">
-              PER CLASS FEE
+              No Membership
             </h3>
-            <div className="space-y-6">
+            <div className="space-y-4">
               <div className="bg-white p-4 rounded-lg shadow-sm">
-                <h4 className="font-bold text-lg mb-1">Non Member</h4>
-                <p className="text-denim">$10 per class</p>
-              </div>
-              <div className="bg-white p-4 rounded-lg shadow-sm">
-                <h4 className="font-bold text-lg mb-1">Regular Member</h4>
-                <p className="text-denim">$5 per class</p>
-              </div>
-              <div className="bg-white p-4 rounded-lg shadow-sm">
-                <h4 className="font-bold text-lg mb-1">Premium Member</h4>
-                <p className="text-denim">All inclusive</p>
+                <p className="text-denim font-semibold text-xl mb-3">$10 per class</p>
+                <ul className="space-y-2 text-sm">
+                  <li className="flex items-start">
+                    <CheckIcon color="text-[#2d7597]" size="small" />
+                    <span>First-timers get their first class for free</span>
+                  </li>
+                </ul>
               </div>
             </div>
           </motion.div>
 
-          {/* Membership */}
+          {/* Regular Membership */}
           <motion.div
             className="bg-skyblue/10 p-8 rounded-xl border-2 border-denim"
-            initial={{ opacity: 0, x: 20 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
             <h3 className="text-2xl font-bold text-center mb-6 text-navy">
-              MEMBERSHIP
+              Regular Membership
             </h3>
-            <div className="space-y-6">
+            <div className="space-y-4">
               <div className="bg-white p-4 rounded-lg shadow-sm">
-                <h4 className="font-bold text-lg mb-1">Regular Year</h4>
-                <p className="text-denim">$35 per year</p>
+                <h4 className="font-bold text-lg mb-1">Annual: $35</h4>
+                <h4 className="font-bold text-lg mb-3">Term: $25</h4>
+                <ul className="space-y-2 text-sm">
+                  <li className="flex items-start">
+                    <CheckIcon color="text-[#2d7597]" size="small" />
+                    <span>Discounted class fees of $5 (on top of the base fee)</span>
+                  </li>
+                  <li className="flex items-start">
+                    <CheckIcon color="text-[#2d7597]" size="small" />
+                    <span>Entered into our term raffles (1 entry)</span>
+                  </li>
+                </ul>
               </div>
-              <div className="bg-white p-4 rounded-lg shadow-sm">
-                <h4 className="font-bold text-lg mb-1">Regular Term</h4>
-                <p className="text-denim">$25 per term</p>
+            </div>
+          </motion.div>
+
+          {/* Premium Membership */}
+          <motion.div
+            className="bg-gradient-to-br from-[#2d7597] to-[#224e70] p-8 rounded-xl border-2 border-[#224e70] md:col-span-2"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.4 }}
+          >
+            <div className="flex items-center justify-center gap-2 mb-6">
+              <h3 className="text-2xl font-bold text-center text-white">
+                Premium Membership
+              </h3>
+              <span className="bg-[#a7d8f0] text-navy text-xs font-bold px-3 py-1 rounded-full">
+                BEST VALUE
+              </span>
+            </div>
+            <div className="bg-white/95 p-6 rounded-lg shadow-sm">
+              <div className="text-center mb-4">
+                <h4 className="font-bold text-xl text-navy mb-1">Annual: $65 | Term: $45</h4>
               </div>
-              <div className="bg-white p-4 rounded-lg shadow-sm">
-                <h4 className="font-bold text-lg mb-1">Regular Year</h4>
-                <p className="text-denim">$65 per year</p>
-              </div>
-              <div className="bg-white p-4 rounded-lg shadow-sm">
-                <h4 className="font-bold text-lg mb-1">Regular Term</h4>
-                <p className="text-denim">$45 per team</p>
+              <div className="grid md:grid-cols-2 gap-4">
+                <ul className="space-y-2 text-sm">
+                  <li className="flex items-start">
+                    <CheckIcon color="text-[#2d7597]" size="small" />
+                    <span><strong>All classes included</strong> (no additional fees)</span>
+                  </li>
+                  <li className="flex items-start">
+                    <CheckIcon color="text-[#2d7597]" size="small" />
+                    <span>Attend social events for <strong>heavily discounted prices/free</strong></span>
+                  </li>
+                  <li className="flex items-start">
+                    <CheckIcon color="text-[#2d7597]" size="small" />
+                    <span>Entered into term raffles <strong>(2 entries)</strong></span>
+                  </li>
+                  <li className="flex items-start">
+                    <CheckIcon color="text-[#2d7597]" size="small" />
+                    <span>Access to <strong>exclusive contests and rewards</strong></span>
+                  </li>
+                </ul>
+                <ul className="space-y-2 text-sm">
+                  <li className="flex items-start">
+                    <CheckIcon color="text-[#2d7597]" size="small" />
+                    <span>Eligible for <strong>care packages and sponsorship goodies</strong></span>
+                  </li>
+                </ul>
               </div>
             </div>
           </motion.div>
@@ -153,26 +182,22 @@ export default function PricesPage() {
             transition={{ duration: 0.6, delay: 0.6 }}
           >
             <div className="flex items-start mb-4">
-              <h3 className="text-xl font-bold text-navy">Exclusive Access</h3>
+              <h3 className="text-xl font-bold text-navy">Member Benefits</h3>
             </div>
-            <p className="text-gray-700 mb-2">Members enjoy:</p>
+            <p className="text-gray-700 mb-2">All members enjoy:</p>
             <ul className="space-y-2">
               <li className="flex items-start">
-                <CheckIcon color="text-[#2d7597]" size="small" />
-                <span>Early access to events</span>
-              </li>
-              <li className="flex items-start">
-                <CheckIcon color="text-[#2d7597]" size="small" />
-                <span>Discounted pricing on workshops</span>
-              </li>
-              <li className="flex items-start">
-                <CheckIcon color="text-[#2d7597]" size="small" />
-                <span>Discounted club merch</span>
-              </li>
-              <li className="flex items-start">
-                <CheckIcon color="text-[#2d7597]" size="small" />
-                <span>Access to raffles, giveaways, and care packages</span>
-              </li>
+                    <CheckIcon color="text-[#2d7597]" size="small" />
+                    <span><strong>Members-only online community</strong> with early access to announcements</span>
+                  </li>
+                  <li className="flex items-start">
+                    <CheckIcon color="text-[#2d7597]" size="small" />
+                    <span><strong>Close friends access</strong> on Instagram for BTS content</span>
+                  </li>
+                  <li className="flex items-start">
+                    <CheckIcon color="text-[#2d7597]" size="small" />
+                    <span><strong>Monthly care packages</strong> and giveaways (limited)</span>
+                  </li>
             </ul>
           </motion.div>
         </div>
