@@ -16,7 +16,7 @@ const classSchedule = [
     instructor: "Maggie",
     time: "9:30 - 10:30 am",
     day: "Tuesday",
-    location: "Life 26",
+    location: "Nest 2301",
   },
   {
     id: 3,

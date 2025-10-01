@@ -1,41 +1,38 @@
 "use client";
 
 import { motion } from "framer-motion";
-import React, {useEffect} from "react";
+import React, {useEffect, useState} from "react";
 import Link from "next/link";
 
 const Hero = () => {
-  useEffect(() => {
-    const loadInstagramWidget = () => {
-        const script = document.createElement("script");
-        script.src = "https://widgets.sociablekit.com/instagram-feed/widget.js";
-        script.defer = true;
-        document.head.appendChild(script);
-      };
-    
-      // Load after a short delay to prioritize critical content
-      const timer = setTimeout(loadInstagramWidget, 1000);
-    
-      return () => {
-        clearTimeout(timer);
-        const existingScript = document.querySelector(
-          'script[src="https://widgets.sociablekit.com/instagram-feed/widget.js"]'
-        );
-        if (existingScript) {
-          document.head.removeChild(existingScript);
-        }
-      };
-  }, []);
   return (
     <>
 
-      <div className="relative bg-gradient-to-br from-slate-50 to-blue-50 overflow-hidden min-h-screen">
+      <div className="relative bg-gradient-to-br from-blue-50 via-cyan-50 to-teal-50 overflow-hidden">
         {/* Main Hero Section */}
         <div className="relative z-10">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="pt-20 pb-16">
+            <div className="pt-16 pb-12">
               {/* Hero Content */}
               <div className="text-center mb-16">
+              <div className="flex justify-center items-start gap-8 mb-8 flex-wrap">
+                {/* Left photo frame - ADD YOUR PHOTO HERE */}
+                <motion.div
+                    initial={{ opacity: 0, x: -50, rotate: -8 }}
+                    animate={{ opacity: 1, x: 0, rotate: -6 }}
+                    transition={{ duration: 0.8 }}
+                    className="hidden md:block"
+                  >
+                    <div className="bg-white p-4 rounded-2xl shadow-xl transform -rotate-6 border-4 border-cyan-200">
+                      <div className="w-48 h-48 bg-gradient-to-br from-cyan-200 to-blue-300 rounded-lg flex items-center justify-center overflow-hidden">
+                        <img src="/group/pilates5.jpg" alt="Pilates class" className="w-full h-full object-cover" />
+                      </div>
+                      <p className="text-center mt-3 font-bold text-navy text-sm">class vibes!</p>
+                    </div>
+                  </motion.div>
+                
+                {/* Main Heading and Subheading */}
+                <div className="flex-1 max-w-2xl">
                 <h1 className="text-6xl md:text-7xl lg:text-8xl font-extrabold mb-6 bg-gradient-to-r text-[#4EC1DA] leading-tight drop-shadow-lg">
                   UBC
                   <br />
@@ -79,6 +76,22 @@ const Hero = () => {
                     </motion.button>
                   </Link>
                 </motion.div>
+                </div>
+                {/* Right photo frame - ADD YOUR PHOTO HERE */}
+                <motion.div
+                    initial={{ opacity: 0, x: 50, rotate: 8 }}
+                    animate={{ opacity: 1, x: 0, rotate: 6 }}
+                    transition={{ duration: 0.8 }}
+                    className="hidden md:block"
+                  >
+                    <div className="bg-white p-4 rounded-2xl shadow-xl transform rotate-6 border-4 border-cyan-200">
+                      <div className="w-48 h-48 bg-gradient-to-br from-pink-200 to-purple-300 rounded-lg flex items-center justify-center overflow-hidden">
+                        <img src="/group/pilates4.jpg" alt="Pilates class" className="w-full h-full object-cover" />
+                      </div>
+                      <p className="text-center mt-3 font-bold text-navy text-sm">strong together ✨</p>
+                    </div>
+                  </motion.div>
+                  </div>
               </div>
             </div>
           </div>
@@ -95,11 +108,8 @@ const Hero = () => {
               className="text-center mb-16"
             >
               <h2 className="text-4xl md:text-5xl font-black text-navy mb-4">
-                Why UBC Students Choose Our Classes
+                Why UBC students love it here
               </h2>
-              <p className="text-xl text-slate-600 max-w-2xl mx-auto">
-                Building UBC&#39;s strongest wellness community
-              </p>
             </motion.div>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -159,14 +169,15 @@ const Hero = () => {
         </section>
 
         {/* Image Gallery Section */}
-        <section className="py-16 bg-white">
+        {/* <section className="py-16 bg-white">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 className="text-center text-4xl md:text-5xl font-black text-navy mb-4">
               UBC Pilates Community in Action
             </h2>
-            <div className="sk-instagram-feed" data-embed-id="25572573"></div>
+
+
           </div>
-        </section>
+        </section> */}
 
         {/* Final CTA */}
         <section className="relative py-20 overflow-hidden">
