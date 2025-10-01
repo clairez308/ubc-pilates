@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import React, {useEffect, useState} from "react";
+// import React, {useEffect, useState} from "react";
 import Link from "next/link";
 
 const Hero = () => {
