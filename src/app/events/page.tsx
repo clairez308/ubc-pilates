@@ -118,10 +118,10 @@ const events = [
   },
   {
     id: 15,
-    title: "TBD",
-    date: "",
+    title: "Monday Haircare x Pilates",
+    date: "Thursday, October 16, 5-7 PM",
     image: "/group/pilates1.jpg",
-    description: "Stay tuned for upcoming events!",
+    description: "Join us for a pink-themed Pilates collab with Monday Haircare! Expect good vibes, photo ops, and exclusive goodies.",
     featured: true,
   },
   
