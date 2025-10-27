@@ -4,6 +4,9 @@ import { motion } from "framer-motion";
 // import React, {useEffect, useState} from "react";
 import Link from "next/link";
 import Stack from "./Stack";
+import CardSwap, { Card } from "./CardSwap";
+import RollingGallery from "./RollingGallery";
+
 const retreatImages = [
   { id: 1, img: "/retreat/retreat1.jpeg" },
   { id: 2, img: "/retreat/retreat2.jpeg" },
@@ -110,104 +113,143 @@ const Hero = () => {
           </div>
         </div>
 
-        {/* Features Section */}
-        <section className="relative py-20 bg-[#e0f4ff] rounded-t-3xl shadow-lg">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Features Section - Split Layout */}
+        <section
+          className="relative py-16 sm:py-20 lg:py-24 bg-gradient-to-br from-[#e0f4ff] via-[#d2f0ff] to-[#e0f4ff] dark:from-[#0b1623] dark:via-[#0f2235] dark:to-[#0b1623] overflow-hidden transition-colors duration-300"
+        >
+          <div className="max-w-7xl mx-auto px-6 lg:px-8">
+            {/* Section Header */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
-              className="text-center mb-16"
+              className="text-center mb-12 sm:mb-16 md:mb-20"
             >
-              <h2 className="text-3xl md:text-4xl font-black text-navy mb-4">
-                Why UBC students love it here
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold 
+        text-[#0a2a43] dark:text-cyan-100 mb-3 sm:mb-4">
+                Why UBC Students Love Pilates
               </h2>
+              <p className="text-lg text-cyan-800 max-w-2xl mx-auto">
+                ~ Discover what makes our classes special ~
+              </p>
             </motion.div>
 
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {[
-                {
-                  icon: "🧘",
-                  title: "Student-Focused Classes",
-                  description:
-                    "Pilates classes designed to fit into your busy schedules!",
-                  color: "bg-[#e0f4ff]",
-                },
-                {
-                  icon: "💵",
-                  title: "Affordable Rates",
-                  description: "Budget-friendly classes for active students",
-                  color: "bg-[#e0f4ff]",
-                },
-                {
-                  icon: "👥",
-                  title: "UBC Community",
-                  description:
-                    "Connect with other pilates enthusiasts and build friendships 💙",
-                  color: "bg-[#e0f4ff]",
-                },
-                {
-                  icon: "🌍",
-                  title: "Inclusive Environment",
-                  description:
-                    "Accessible pilates classes for all experience levels at UBC!",
-                  color: "bg-[#e0f4ff]",
-                },
-              ].map((feature, index) => (
-                <motion.article
-                  key={index}
-                  className="p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 bg-white border border-[#e0f4ff]"
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.4, delay: index * 0.1 }}
-                >
-                  <div
-                    className={`h-20 w-20 rounded-2xl flex items-center justify-center mx-auto mb-6 text-3xl ${feature.color}`}
-                    aria-hidden="true"
+            {/* Content Grid */}
+            <div className="grid lg:grid-cols-2 gap-16 items-center">
+              {/* Left: Retreat Photos + Text */}
+              <motion.div
+                initial={{ opacity: 0, x: 50 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.8 }}
+                className="flex flex-col items-center text-center lg:text-left"
+              >
+                <div className="mb-8">
+                  <Stack
+                    randomRotation={true}
+                    sensitivity={180}
+                    sendToBackOnClick={true}
+                    cardDimensions={{ width: 300, height: 300 }}
+                    cardsData={retreatImages}
+                  />
+                </div>
+                <p className="text-cyan-700 text-lg max-w-md leading-relaxed">
+                  Swipe through memories from our Exec Retreat!
+                </p>
+              </motion.div>
+              {/* Right: CardSwap Animated Cards */}
+              <motion.div
+                initial={{ opacity: 0, x: -50 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.8 }}
+                className="flex justify-center lg:justify-start"
+              >
+                <div className="relative  flex justify-center items-center">
+                  <CardSwap
+                    width={350}
+                    height={220}
+                    cardDistance={50}
+                    verticalDistance={60}
+                    delay={2500}
+                    pauseOnHover={true}
+                    skewAmount={4}
+                    easing="elastic"
                   >
-                    {feature.icon}
-                  </div>
-                  <h3 className="text-xl font-bold text-center mb-3 text-[#333333]">
-                    {feature.title}
-                  </h3>
-                  <p className="text-center text-[#3d98c6]">
-                    {feature.description}
-                  </p>
-                </motion.article>
-              ))}
+                    <Card className="bg-white border-2 border-cyan-200 shadow-lg hover:shadow-2xl transition-all duration-300">
+                      <div className="p-6 h-full flex flex-col items-center justify-center">
+                        <div className="text-5xl mb-4">🧘</div>
+                        <h3 className="text-xl font-bold text-center mb-3 text-gray-800">
+                          Student-Focused Classes
+                        </h3>
+                        <p className="text-center text-cyan-600">
+                          Pilates classes designed to fit your busy student
+                          schedule.
+                        </p>
+                      </div>
+                    </Card>
+
+                    <Card className="bg-white border-2 border-pink-200 shadow-lg hover:shadow-2xl transition-all duration-300">
+                      <div className="p-6 h-full flex flex-col items-center justify-center">
+                        <div className="text-5xl mb-4">💵</div>
+                        <h3 className="text-xl font-bold text-center mb-3 text-gray-800">
+                          Affordable Memberships
+                        </h3>
+                        <p className="text-center text-cyan-600">
+                          Stay active without breaking your student budget.
+                        </p>
+                      </div>
+                    </Card>
+
+                    <Card className="bg-white border-2 border-purple-200 shadow-lg hover:shadow-2xl transition-all duration-300">
+                      <div className="p-6 h-full flex flex-col items-center justify-center">
+                        <div className="text-5xl mb-4">👥</div>
+                        <h3 className="text-xl font-bold text-center mb-3 text-gray-800">
+                          Supportive Community
+                        </h3>
+                        <p className="text-center text-cyan-600">
+                          Connect, stretch, and grow with other UBC students.
+                        </p>
+                      </div>
+                    </Card>
+
+                    <Card className="bg-white border-2 border-teal-200 shadow-lg hover:shadow-2xl transition-all duration-300">
+                      <div className="p-6 h-full flex flex-col items-center justify-center">
+                        <div className="text-5xl mb-4">🌍</div>
+                        <h3 className="text-xl font-bold text-center mb-3 text-gray-800">
+                          Inclusive for Everyone
+                        </h3>
+                        <p className="text-center text-cyan-600">
+                          Classes accessible for all experience levels at UBC.
+                        </p>
+                      </div>
+                    </Card>
+                  </CardSwap>
+                </div>
+              </motion.div>
             </div>
           </div>
         </section>
 
-        {/* Image Gallery Section */}
-        {/* <section className="py-16 bg-white">
-          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="text-center text-4xl md:text-5xl font-black text-navy mb-4">
+        {/* Rolling Gallery Section */}
+        {/* <section className="relative py-20 bg-gradient-to-br from-[#f0fcff] to-[#d9f7ff] overflow-hidden">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <motion.h2
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+              className="text-center text-3xl sm:text-4xl font-extrabold text-[#0a2a43] mb-12"
+            >
               UBC Pilates Community in Action
-            </h2>
+            </motion.h2>
+
+            <div className="flex justify-center items-center overflow-hidden">
+              <RollingGallery autoplay={true} pauseOnHover={true} />
+            </div>
           </div>
         </section> */}
-        <section className="py-20 bg-white">
-          <div className="max-w-4xl mx-auto text-center px-4">
-            <h2 className="text-4xl md:text-4xl font-black text-navy mb-4">
-              UBC Pilates Community in Action
-            </h2>
-            <div className="flex justify-center">
-              <Stack
-                randomRotation={true}
-                sensitivity={180}
-                sendToBackOnClick={true}
-                cardDimensions={{ width: 300, height: 300 }}
-                cardsData={retreatImages}
-              />
-            </div>
-            <p className="mt-6 text-cyan-700 text-lg">
-              Swipe through moments from our unforgettable retreat!
-            </p>
-          </div>
-        </section>
 
         {/* Final CTA */}
         <section className="relative py-20 overflow-hidden">

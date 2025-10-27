@@ -14,21 +14,21 @@ const teamMembers = [
   {
     name: "Vivian Tuan",
     role: "Co-President",
-    image: "/team/vivian.avif",
+    image: "/team/vivian.jpg",
     description:
       "Meet Vivian, this club’s incredible Co-President, whom you may occasionally catch playing Infinite Stairs on her phone. She is in her third year of psychology and cannot wait to begin pilates with the girlies! Vivian is quite the Blue Chip fan, as well. Here is one for the fruit lovers: “My favourite fruits are cherry tomatoes, guava and Granny Smiths!”",
   },
   {
     name: "Mauli Sood",
     role: "Senior Pilates Instructor",
-    image: "/team/mauli.jpeg",
+    image: "/team/mauli.jpg",
     description:
       "Hello! I am a Senior Pilates instructor and currently in my third year at Sauder. This would be my 2nd year in the club and I will soon be a certified instructor as well. I love studying at cafes, walking at the beach, and chocolate cupcakes! I am really excited to invite all you back to my classes this year:)",
   },
   {
     name: "Romina Barnes",
     role: "Junior Pilates Instructor",
-    image: "/team/romina.JPG",
+    image: "/team/romina.jpg",
     description:
       "Meet Romina! This Junior Pilates Instructor is in her second year of neuroscience and is a big fan of Blue Chip's dirty iced matcha latte. If she's not napping, then you can catch her spending time outdoors or cozied up reading a book. She can't wait to get creative with the playlists for the classes and hope to have fun with everyone soon!",
   },
@@ -49,64 +49,64 @@ const teamMembers = [
   {
     name: "Maya Juliette Ga",
     role: "Junior Pilates Instructor",
-    image: "/team/maya.avif",
+    image: "/team/maya.jpg",
     description:
       "Hey everyone! My name is Maya and I’m going into my fourth year studying Psychology. This will be my third year with the club, but first year as a Junior Pilates Instructor. I’m so excited to be a part of this wonderful and new team, and excited for all the amazing events they’re planning. I hope to see you at one of my classes this year!!",
   },
   {
     name: "Alina Wang",
     role: "Junior Pilates Instructor",
-    image: "/team/alina.jpeg",
+    image: "/team/alina.jpg",
     description:
       "Hi everyone! I’m a 2nd year Junior Pilates Instructor and I hope you enjoy and benefit from it during the school year as much as I do. Looking forward to meeting you in the fall!",
   },
   {
     name: "Adriana Cowan",
     role: "Junior Pilates Instructor",
-    image: "/team/adriana.JPEG",
+    image: "/team/adriana.jpg",
     description:
       "Hi I’m Adriana and I am very excited to be a Junior Pilates Instructor this year! I have been a student at UBC since 2019, graduating with my BASc in Electrical Engineering in 2023 and I am currently pursuing my MASc in Biomedical Engineering. I love pop music, my current favourite artists include Sabrina Carpenter and Taylor Swift. I have always enjoyed Pilates, I am looking forward to classes this term! ",
   },
   {
     name: "Kira Gaebel",
     role: "VP Marketing",
-    image: "/team/kira.png",
+    image: "/team/kira.jpg",
     description: "Hi, my name is Kira and I’m in my fourth year studying marketing. I started doing Pilates in my first year at UBC, and it has been such an important way for me to stay active and balanced throughout university. I joined UBC Pilates in May 2025, and this community has quickly become something very special and close to my heart.",
   },
   {
     name: "Annie Wu",
     role: "Visual Media Director",
-    image: "/team/annie.jpeg",
+    image: "/team/annie.jpg",
     description: "Heyy! I’m a third-year Psychology student at UBC and currently the Visual Media Director for UBC Pilates Club. I’ve always loved a good pilates workout class and how it makes workouts fun and challenging! ",
   },
   {
     name: "Sanchi Shorewala",
     role: "Visual Media Director",
-    image: "/team/sanchi.jpeg",
+    image: "/team/sanchi.jpg",
     description: "I'm a 3rd year Psych major who loves reading, sketching and cooking up a storm :)) Our UBC Pilates Club community means so much to me; I have made so many friends and memories that I will cherish forever, & I hope it can mean as much to you!!",
   },
   {
     name: "Jaden Gunn",
     role: "Social Media Director",
-    image: "/team/jaden.jpg",
+    image: "/team/jaden.avif",
     description: "Hi! My name's Jaden, I'm going into my third year as psychology major. I'm so excited to be back with the club this year as a Social Media Director. Get ready for lots of trendy TikToks and even more fun content on our IG. Hit me up with any new food reccs and I'll see you in class!! ",
   },
   {
     name: "Nanami Kubo",
     role: "Social Media Director",
-    image: "/team/nanami.avif",
+    image: "/team/nanami.jpg",
     description: "Nanami is a third year student majoring in IR! In her free time, she enjoys going on walks, grabbing coffee, and baking some sweet treats. Excited for a wonderful year ahead <3",
   },
   {
     name: "Sofia Ahmadiyar",
     role: "Newsletter Director",
-    image: "/team/sofia.avif",
+    image: "/team/sofia.jpg",
     description: "I’m a third year poli sci/philosophy student! I loveeeeeeeee this team, and I love how accessible and modifiable Pilates can be so that everyone can partake! I enjoy exploring new grocery stores and talking about the weather",
   },
   {
     name: "Lucas Chan",
     role: "Videographer + Video Editor",
-    image: "/team/lucas.PNG",
+    image: "/team/lucas.jpg",
     description: "Hey! I'm Lucas and I'm the videographer/video editor for UBC Pilates. I'm in 3rd year biochemistry and I really enjoy doing videography and editing (who could've guessed🧐). Pilates has a great community so hope to see you at classes!",
   },
   {
@@ -124,37 +124,37 @@ const teamMembers = [
   {
     name: "Yuly Topp",
     role: "VP External",
-    image: "/team/yuly.jpeg",
+    image: "/team/yuly.jpg",
     description: "I’m the VP of External and a third-year Social Work student. I love how Pilates strengthens both the body and mind. A fun fact about me is that I have a one eyed cat.",
   },
   {
     name: "Armita Bagheri",
     role: "AVP External - Sponsorship",
-    image: "/team/armita.jpeg",
+    image: "/team/armita.jpg",
     description: "Hi everyone, I'm Armita and I’m an AVP External for Sponsorships at the UBC Pilates Club! I’m going into my second year, majoring in neuroscience. Some of my favourite hobbies are playing the piano, playing volleyball, and of course doing pilates!!",
   },
   {
     name: "Toko Fukushima",
     role: "AVP External - Sponsorship",
-    image: "/team/toko.jpeg",
+    image: "/team/toko.jpg",
     description: "Hi! I’m Toko from Tokyo (not a pun lmao) This is my second year of being AVP External for Sponsorship! I’m excited to collaborate with many wonderful companies this year for UBC pilates (;",
   },
   {
     name: "Jia Mehra",
     role: "AVP External - Collaborations",
-    image: "/team/jia.JPG",
+    image: "/team/jia.jpg",
     description: "Hey everyone, I'm Jia! I’m in my 2nd year, majoring in Psychology + in the B+MM program. This is my first year with the club and I’m so excited to be a part of it! Pilates helps me feel calm and re-centered, and I can’t wait for all the fun events and community this year. Outside of class, you’ll most likely find me singing, thrifting, or grabbing a strawberry matcha!",
   },
   {
     name: "Tia Dandona",
     role: "AVP External - Collaborations",
-    image: "/team/tia.jpeg",
+    image: "/team/tia.jpg",
     description: "Hi! I am Tia, the AVP External, Collabs for 2025-26! I am a third year at Sauder studying finance. I love fitness, going to the gym and absolutely love how Pilates is such a transforming activity!",
   },
   {
     name: "Fatima Mudassar",
     role: "VP Internal",
-    image: "/team/fatima.jpeg",
+    image: "/team/fatima.jpg",
     description: "Hi! My name is Fatima Mudassar and I’m the VP Internal for the UBC Pilates Club. I’m in my third year studying Cognitive Systems. In my free time, I enjoy making art, hanging out with my dogs, and eating good food!",
   },
   {
@@ -166,7 +166,7 @@ const teamMembers = [
   {
     name: "Pia",
     role: "AVP Internal",
-    image: "/team/pia.png",
+    image: "/team/pia.jpg",
     description: "",
   },
   {
@@ -178,7 +178,7 @@ const teamMembers = [
   {
     name: "Elaina Fung",
     role: "AVP - Finance",
-    image: "/team/elaina.jpeg",
+    image: "/team/elaina.jpg",
     description: "Hey! I'm the AVP Finance and I'm currently in my second year of Commerce with a minor in Law and Society. I love rainy days and books. I'm so excited to start a new year with the Pilates club and am looking forward to seeing everyone! ",
   },
 ];
