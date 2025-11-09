@@ -4,8 +4,8 @@ import { motion } from "framer-motion";
 // import React, {useEffect, useState} from "react";
 import Link from "next/link";
 import Stack from "./Stack";
-import CardSwap, { Card } from "./CardSwap";
-import RollingGallery from "./RollingGallery";
+// import CardSwap, { Card } from "./CardSwap";
+// import RollingGallery from "./RollingGallery";
 
 const retreatImages = [
   { id: 1, img: "/retreat/retreat1.jpeg" },
@@ -167,7 +167,7 @@ const Hero = () => {
                 className="flex justify-center lg:justify-start"
               >
                 <div className="relative  flex justify-center items-center">
-                  <CardSwap
+                  {/* <CardSwap
                     width={350}
                     height={220}
                     cardDistance={50}
@@ -225,7 +225,7 @@ const Hero = () => {
                         </p>
                       </div>
                     </Card>
-                  </CardSwap>
+                  </CardSwap> */}
                 </div>
               </motion.div>
             </div>
