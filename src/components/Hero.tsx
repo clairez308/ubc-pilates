@@ -36,7 +36,7 @@ const Hero = () => {
                     <div className="bg-white p-4 rounded-2xl shadow-xl transform -rotate-6 border-4 border-cyan-200">
                       <div className="w-48 h-48 bg-gradient-to-br from-cyan-200 to-blue-300 rounded-lg flex items-center justify-center overflow-hidden">
                         <img
-                          src="/group/pilates5.jpg"
+                          src="/group/content5.jpg"
                           alt="Pilates class"
                           className="w-full h-full object-cover"
                         />
@@ -100,7 +100,7 @@ const Hero = () => {
                     <div className="bg-white p-4 rounded-2xl shadow-xl transform rotate-6 border-4 border-cyan-200">
                       <div className="w-48 h-48 bg-gradient-to-br from-pink-200 to-purple-300 rounded-lg flex items-center justify-center overflow-hidden">
                         <img
-                          src="/group/pilates4.jpg"
+                          src="/group/content4.jpg"
                           alt="Pilates class"
                           className="w-full h-full object-cover"
                         />
