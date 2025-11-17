@@ -218,11 +218,13 @@ export default function EventsPage() {
               key={index}
               className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow"
             >
+                <div className="w-full h-64 overflow-hidden bg-gray-100">
               <img
                 src={event.image}
                 alt={event.title}
                 className="w-full h-64 object-cover"
               />
+              </div>
               <div className="p-6">
                 <h3 className="text-xl font-bold mb-2">{event.title}</h3>
                 <p className="text-denim font-medium mb-4">{event.date}</p>
@@ -242,11 +244,13 @@ export default function EventsPage() {
               key={index}
               className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow"
             >
+                <div className="w-full h-48 overflow-hidden bg-gray-100">
               <img
                 src={event.image}
                 alt={event.title}
                 className="w-full h-64 object-cover"
               />
+              </div>
               <div className="p-4">
                 <h3 className="text-lg font-bold mb-1">{event.title}</h3>
                 <p className="text-denim font-medium mb-2">{event.date}</p>
