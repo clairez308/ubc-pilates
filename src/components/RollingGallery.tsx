@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useCallback, useEffect, useState } from "react";
 import {
   motion,
   useMotionValue,
@@ -61,16 +61,20 @@ useEffect(() => {
     (val: number) => `rotate3d(0,1,0,${val}deg)`
   );
 
-  const startInfiniteSpin = (startAngle: number) => {
-    controls.start({
-      rotateY: [startAngle, startAngle - 360],
-      transition: {
-        duration: 45,
-        ease: "linear",
-        repeat: Infinity,
-      },
-    });
-  };
+  const startInfiniteSpin = useCallback(
+    (startAngle: number) => {
+      controls.start({
+        rotateY: [startAngle, startAngle - 360],
+        transition: {
+          duration: 45,
+          ease: "linear",
+          repeat: Infinity,
+        },
+      });
+    },
+    [controls]
+  );
+  
 
   useEffect(() => {
     if (autoplay) {
@@ -79,26 +83,26 @@ useEffect(() => {
     } else {
       controls.stop();
     }
-  }, [autoplay]);
+  }, [autoplay, rotation, startInfiniteSpin, controls]);
+  
 
-  const handleUpdate = (latest: any) => {
+  const handleUpdate = (latest: { rotateY?: number }) => {
     if (typeof latest.rotateY === "number") {
       rotation.set(latest.rotateY);
     }
   };
-
-  const handleDrag = (_: any, info: PanInfo): void => {
+  
+  const handleDrag = (_: MouseEvent | TouchEvent | PointerEvent, info: PanInfo): void => {
     controls.stop();
     rotation.set(rotation.get() + info.offset.x * dragFactor);
   };
-
-  const handleDragEnd = (_: any, info: PanInfo): void => {
+  
+  const handleDragEnd = (_: MouseEvent | TouchEvent | PointerEvent, info: PanInfo): void => {
     const finalAngle = rotation.get() + info.velocity.x * dragFactor;
     rotation.set(finalAngle);
-    if (autoplay) {
-      startInfiniteSpin(finalAngle);
-    }
+    if (autoplay) startInfiniteSpin(finalAngle);
   };
+  
 
   const handleMouseEnter = (): void => {
     if (autoplay && pauseOnHover) {
