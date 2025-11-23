@@ -5,50 +5,59 @@ import React from "react";
 import Link from "next/link";
 
 const partners = [
-  {
+//   {
+//     id: 1,
+//     name: "Get Thrifty",
+//     logo: "/sponsors/get thrifty.avif",
+//     description: "UBC's on campus thrift and consignment store",
+//     featured: true,
+//     link: "https://getthrifty.ca/",
+//   },
+{
     id: 1,
-    name: "Get Thrifty",
-    logo: "/sponsors/get thrifty.avif",
-    description: "UBC's on campus thrift and consignment store",
+    name: "Heal",
+    logo: "/sponsors/heal.png",
     featured: true,
-    link: "https://getthrifty.ca/",
+    description: "We’re more than a vitamin, supplement and health food store, we’re a lifestyle.",
+    link: "https://www.healwellness.ca/",
   },
   {
     id: 2,
-    name: "CVC",
-    logo: "/sponsors/cvc.avif",
-    description:
-      "One of the biggest and most dynamic social clubs on campus, helping you make the most of your university experience.",
+    name: "LSKD",
+    logo: "/sponsors/lskd.png",
     featured: true,
-    link: "https://www.instagram.com/ubc.cvc/?hl=en",
+    description: "Athleisure and activewear brand designed for movement and everyday life.",
+    link: "https://ca.lskd.co/",
   },
+
   {
     id: 3,
-    name: "Chinese Students' Association (CSA)",
-    logo: "/sponsors/csa.avif",
-    description: "First and longest-standing Chinese student club at UBC",
+    name: "Gold's Gym",
+    logo: "/sponsors/goldgym.avif",
+    desciption: "BC's top gym with the best equipment, amenities & personal trainers. Experience the best gym with Gold's Gym.",
     featured: true,
-    link: "https://www.instagram.com/ubccsa/",
+    link: "https://goldsgymbc.ca/",
   },
-  {
-    id: 4,
-    name: "Teadot",
-    logo: "/sponsors/teadot.avif",
+  
+//   {
+//     id: 3,
+//     name: "Chinese Students' Association (CSA)",
+//     logo: "/sponsors/csa.avif",
+//     description: "First and longest-standing Chinese student club at UBC",
+//     featured: true,
+//     link: "https://www.instagram.com/ubccsa/",
+//   },
+{
+    id: 9,
+    name: "Poppi",
+    logo: "/sponsors/poppi.png",
     description:
-      "Providing people with delicious and healthy beverages that are made with love.",
+      "A new twist on soda - functional, prebiotic, and made with real fruit.",
     featured: true,
-    link: "https://www.teadotdrinks.com/",
+    link: "https://drinkpoppi.com/?srsltid=AfmBOorumSNblb48RhoF1z4zlUhMcW-zcBN-gqlt4gkthUgy8Ck5PBUB",
   },
   {
-    id: 5,
-    name: "Steve's Poke Bar",
-    logo: "/sponsors/stevespoke.jpg",
-    description: "Authentic Hawaiian poké",
-    featured: true,
-    link: "https://www.stevespokebar.ca/",
-  },
-  {
-    id: 6,
+    id: 7,
     name: "Redbull",
     logo: "/sponsors/redbull.png",
     description:
@@ -57,7 +66,16 @@ const partners = [
     link: "https://www.redbull.com/ca-en",
   },
   {
-    id: 7,
+    id: 5,
+    name: "Teadot",
+    logo: "/sponsors/teadot.png",
+    description:
+      "Providing people with delicious and healthy beverages that are made with love.",
+    featured: true,
+    link: "https://www.teadotdrinks.com/",
+  },
+  {
+    id: 8,
     name: "Oakberry",
     logo: "/sponsors/oakberry.png",
     description:
@@ -65,15 +83,26 @@ const partners = [
     featured: true,
     link: "https://www.oakberry.com/en-CA",
   },
+  
   {
-    id: 8,
-    name: "Subi",
-    logo: "/sponsors/subi.png",
-    description:
-      "The easiest way to get 100% of your daily serving of vegetables.",
+    id: 6,
+    name: "Steve's Poke Bar",
+    logo: "/sponsors/stevespoke.jpg",
+    description: "Authentic Hawaiian poké",
     featured: true,
-    link: "https://getsubi.com/?ref=usuycwdt&gad_source=1&gad_campaignid=22952373108&gbraid=0AAAABBK8ydutb3u7q5pdhKZatJP24ujY2&gclid=CjwKCAiAwqHIBhAEEiwAx9cTeXly1B6b-MRP6aiA1Jyg8fQPlFs5zP6HhphyjPdJnlFRbUOzxbfhhxoCHEIQAvD_BwE",
+    link: "https://www.stevespokebar.ca/",
   },
+  
+  
+//   {
+//     id: 8,
+//     name: "Subi",
+//     logo: "/sponsors/subi.png",
+//     description:
+//       "The easiest way to get 100% of your daily serving of vegetables.",
+//     featured: true,
+//     link: "https://getsubi.com/?ref=usuycwdt&gad_source=1&gad_campaignid=22952373108&gbraid=0AAAABBK8ydutb3u7q5pdhKZatJP24ujY2&gclid=CjwKCAiAwqHIBhAEEiwAx9cTeXly1B6b-MRP6aiA1Jyg8fQPlFs5zP6HhphyjPdJnlFRbUOzxbfhhxoCHEIQAvD_BwE",
+//   },
 //   {
 //     id: 9,
 //     name: "Guru Energy Drink",
@@ -81,14 +110,7 @@ const partners = [
 //     featured: false,
 //     link: "https://guruenergy.com/?srsltid=AfmBOopElla5RRVmfI8-1kZ0wbXbmgDYzRJ6id7e7wClaZ-k0BDX9VAl",
 //   },
-  {
-    id: 10,
-    name: "Gold's Gym",
-    logo: "/sponsors/goldgym.avif",
-    desciption: "BC's top gym with the best equipment, amenities & personal trainers. Experience the best gym with Gold's Gym.",
-    featured: true,
-    link: "https://goldsgymbc.ca/",
-  },
+  
 //   {
 //     id: 11,
 //     name: "Grounds For Coffee",
@@ -182,21 +204,22 @@ const partners = [
     description: "We’re more than a vitamin, supplement and health food store, we’re a lifestyle.",
     link: "https://rumbleboxing.com/vancouver",
   },
-  {
-    id: 24,
-    name: "Organika",
-    logo: "/sponsors/organika.png",
+//   {
+//     id: 24,
+//     name: "Organika",
+//     logo: "/sponsors/organika.png",
+//     featured: true,
+//     description: "We’re more than a vitamin, supplement and health food store, we’re a lifestyle.",
+//     link: "https://organika.com/?srsltid=AfmBOorAz69cU69LBblxzCMIUo1payp17Z9FvNw1-MR26n5OTW274wFg",
+//   },
+{
+    id: 4,
+    name: "CVC",
+    logo: "/sponsors/cvc.avif",
+    description:
+      "One of the biggest and most dynamic social clubs on campus, helping you make the most of your university experience.",
     featured: true,
-    description: "We’re more than a vitamin, supplement and health food store, we’re a lifestyle.",
-    link: "https://organika.com/?srsltid=AfmBOorAz69cU69LBblxzCMIUo1payp17Z9FvNw1-MR26n5OTW274wFg",
-  },
-  {
-    id: 25,
-    name: "Heal",
-    logo: "/sponsors/heal.png",
-    featured: true,
-    description: "We’re more than a vitamin, supplement and health food store, we’re a lifestyle.",
-    link: "https://www.healwellness.ca/",
+    link: "https://www.instagram.com/ubc.cvc/?hl=en",
   },
   {
     id: 26,
