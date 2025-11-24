@@ -237,6 +237,22 @@ const partners = [
     description: "Workouts that aim to have you feeling youself, on a deeper level.",
     link: "https://www.jaybirdjaybird.com/",
   },
+  {
+    id: 28,
+    name: "Herbaland Gummies",
+    logo: "/sponsors/herbaland.png",
+    featured: true,
+    description: "Vitamins and supplements made with natural ingredients in delicious gummy form.",
+    link: "https://www.herbaland.ca/collections/all?utm_source=google&utm_medium=cpc&utm_campaign=brand&gad_source=1&gad_campaignid=1079326510&gbraid=0AAAAADkvnLDNkN2lVFa4PwO7HcXpyW8Qp&gclid=Cj0KCQiAoZDJBhC0ARIsAERP-F8sbCYFCipPnZRVlRhGfDfzgpj9WoqVj8Wemsq0pbWOdLUpYy3TETYaAjx_EALw_wcB",
+  },
+  {
+    id: 29,
+    name: "Skoah",
+    logo: "/sponsors/skoah.png",
+    featured: true,
+    description: "Get your glow on with Skoah's personalized facial treatments and skincare products.",
+    link: "https://www.skoah.com/?gad_source=1&gad_campaignid=23165272929&gbraid=0AAAAABjXeSpU7Y5IUNozjAuJfPIhckRRc&gclid=Cj0KCQiAoZDJBhC0ARIsAERP-F8iBV5l52iWP_F2ID6KA2x1PO4X51Waz__iZ3XCADXudkzFbdE-2l0aAhxLEALw_wcB",
+  },
   
 ];
 
