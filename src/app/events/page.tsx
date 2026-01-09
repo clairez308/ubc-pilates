@@ -5,12 +5,44 @@ import React from "react";
 
 const events = [
     {
+        title: "LDC x Pilates Club Collab",
+        date: "January 13, 2026",
+        image: "/group/content1.jpg",
+        description:
+          "",
+        featured: true,
+      },
+    {
+        title: "Pop up class",
+        date: "January 15, 2026",
+        image: "/group/content2.jpg",
+        description:
+          "",
+        featured: true,
+      },
+    {
+        title: "Free Week",
+        date: "January 19 - 23, 2026",
+        image: "/group/content3.jpg",
+        description:
+          "",
+        featured: true,
+      },
+      {
+        title: "Clubs Fair",
+        date: "January 27/28/29, 2026",
+        image: "/group/content4.jpg",
+        description:
+          "",
+        featured: true,
+      },
+    {
         title: "Early Bird Energy Themed Class",
         date: "November 18, 2025",
         image: "/group/content1.jpg",
         description:
           "",
-        featured: true,
+        featured: false,
       },
       {
         title: "Wicked Themed Class",
@@ -18,7 +50,7 @@ const events = [
         image: "/group/content2.jpg",
         description:
           "",
-        featured: true,
+        featured: false,
       },
       {
         title: "Cloudy Themed Class",
@@ -26,7 +58,7 @@ const events = [
         image: "/group/content3.jpg",
         description:
           "",
-        featured: true,
+        featured: false,
       },
       {
         title: "Benny Class",
@@ -34,7 +66,7 @@ const events = [
         image: "/group/content4.jpg",
         description:
           "",
-        featured: true,
+        featured: false,
       },
       {
         title: "Winter Themed Class",
@@ -42,7 +74,7 @@ const events = [
         image: "/group/content5.jpg",
         description:
           "",
-        featured: true,
+        featured: false,
       },
   {
     title: "Sweet Social x POPPI",
