@@ -47,7 +47,7 @@ const events = [
       {
         title: "Wicked Themed Class",
         date: "November 26, 2025",
-        image: "/group/content2.jpg",
+        image: "/group/wicked.jpg",
         description:
           "",
         featured: false,
@@ -63,7 +63,7 @@ const events = [
       {
         title: "Benny Class",
         date: "December 3, 2025",
-        image: "/group/content4.jpg",
+        image: "/group/benny.jpg",
         description:
           "",
         featured: false,

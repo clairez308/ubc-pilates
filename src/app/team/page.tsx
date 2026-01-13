@@ -48,7 +48,7 @@ const teamMembers = [
   },
   {
     name: "Maya Juliette Ga",
-    role: "Junior Pilates Instructor",
+    role: "Junior Pilates Instructor & VP Internal",
     image: "/team/maya.jpg",
     description:
       "Hey everyone! My name is Maya and I’m going into my fourth year studying Psychology. This will be my third year with the club, but first year as a Junior Pilates Instructor. I’m so excited to be a part of this wonderful and new team, and excited for all the amazing events they’re planning. I hope to see you at one of my classes this year!!",
@@ -150,12 +150,6 @@ const teamMembers = [
     role: "AVP External - Collaborations",
     image: "/team/tia.jpg",
     description: "Hi! I am Tia, the AVP External, Collabs for 2025-26! I am a third year at Sauder studying finance. I love fitness, going to the gym and absolutely love how Pilates is such a transforming activity!",
-  },
-  {
-    name: "Fatima Mudassar",
-    role: "VP Internal",
-    image: "/team/fatima.jpg",
-    description: "Hi! My name is Fatima Mudassar and I’m the VP Internal for the UBC Pilates Club. I’m in my third year studying Cognitive Systems. In my free time, I enjoy making art, hanging out with my dogs, and eating good food!",
   },
   {
     name: "Grace Kim",

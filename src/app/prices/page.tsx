@@ -49,7 +49,7 @@ export default function PricesPage() {
             className="bg-skyblue/10 p-8 rounded-xl border-2 border-denim"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
+            viewport={{ once: false }}
             transition={{ duration: 0.6 }}
           >
             <h3 className="text-2xl font-bold text-center mb-6 text-navy">
@@ -73,7 +73,7 @@ export default function PricesPage() {
             className="bg-skyblue/10 p-8 rounded-xl border-2 border-denim"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
+            viewport={{ once: false }}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
             <h3 className="text-2xl font-bold text-center mb-6 text-navy">
@@ -102,7 +102,7 @@ export default function PricesPage() {
             className="bg-gradient-to-br from-[#2d7597] to-[#224e70] p-8 rounded-xl border-2 border-[#224e70] md:col-span-2"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
+            viewport={{ once: false }}
             transition={{ duration: 0.6, delay: 0.4 }}
           >
             <div className="flex items-center justify-center gap-2 mb-6">
@@ -160,7 +160,7 @@ export default function PricesPage() {
             className="bg-white p-6 rounded-xl shadow-md border-l-4 border-[#a7d8f0]"
             initial={{ opacity: 0, x: 20 }}
             whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
+            viewport={{ once: false }}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
             <div className="flex items-start mb-4">
@@ -178,7 +178,7 @@ export default function PricesPage() {
             className="bg-white p-6 rounded-xl shadow-md border-l-4 border-[#2d7597]"
             initial={{ opacity: 0, x: 20 }}
             whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
+            viewport={{ once: false }}
             transition={{ duration: 0.6, delay: 0.6 }}
           >
             <div className="flex items-start mb-4">
@@ -208,7 +208,7 @@ export default function PricesPage() {
         className="bg-[#e0f4ff] p-8 rounded-xl shadow-lg"
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
-        viewport={{ once: true }}
+        viewport={{ once: false }}
         transition={{ duration: 0.6, delay: 0.2 }}
       >
         <h2 className="text-2xl font-bold text-navy mb-6">
