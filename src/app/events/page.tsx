@@ -6,74 +6,42 @@ import React from "react";
 const events = [
     {
         title: "LDC x Pilates Club Collab",
-        date: "January 13, 2026",
-        image: "/group/content1.jpg",
+        date: "February 2 5-6 PM, 2026",
+        image: "/group/2016.png",
         description:
-          "",
+          "WE HEARD 2016 IS BACK 💿✨ Join us for our 2016s themed Pilates class and dress like it’s a throwback year we all lowkey miss.",
         featured: true,
       },
-    {
-        title: "Pop up class",
+      {
+        title: "Pop Up Pilates",
         date: "January 15, 2026",
-        image: "/group/content2.jpg",
+        image: "/group/pop up.png",
         description:
-          "",
-        featured: true,
+          "Our first FREE pop-up class of 2026!",
+        featured: false,
       },
     {
-        title: "Free Week",
-        date: "January 19 - 23, 2026",
-        image: "/group/content3.jpg",
+        title: "Sway n' Stretch",
+        date: "January 13, 2026",
+        image: "/group/latin.png",
         description:
-          "",
-        featured: true,
-      },
-      {
-        title: "Clubs Fair",
-        date: "January 27/28/29, 2026",
-        image: "/group/content4.jpg",
-        description:
-          "",
-        featured: true,
-      },
-    {
-        title: "Early Bird Energy Themed Class",
-        date: "November 18, 2025",
-        image: "/group/content1.jpg",
-        description:
-          "",
+          "Latin-themed class in collaboration with UBC Latin Dance Club!",
         featured: false,
-      },
-      {
-        title: "Wicked Themed Class",
-        date: "November 26, 2025",
-        image: "/group/wicked.jpg",
-        description:
-          "",
-        featured: false,
-      },
-      {
-        title: "Cloudy Themed Class",
-        date: "November 28, 2025",
-        image: "/group/content3.jpg",
-        description:
-          "",
-        featured: false,
-      },
+      }, 
       {
         title: "Benny Class",
         date: "December 3, 2025",
         image: "/group/benny.jpg",
         description:
-          "",
+          "❄️ UBC Pilates x Benny Winter Wellness Class! ❄️",
         featured: false,
-      },
+      },       
       {
-        title: "Winter Themed Class",
-        date: "December 4, 2025",
-        image: "/group/content5.jpg",
+        title: "Wicked Themed Class",
+        date: "November 26, 2025",
+        image: "/group/wicked.jpg",
         description:
-          "",
+          "🧙‍♀️ Something Wicked is Coming… 💚💗",
         featured: false,
       },
   {
