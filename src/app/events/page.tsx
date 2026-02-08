@@ -5,12 +5,20 @@ import React from "react";
 
 const events = [
     {
+        title: "UBC Pilates x WiDS @ UBC: Galentine’s",
+        date: "February 4 7:30 - 8:30 PM, 2026",
+        image: "/group/wids.png",
+        description:
+          "Galentine’s Pilates with UBC Pilates x WiDS @ UBC 💗✨",
+        featured: false,
+      },
+    {
         title: "LDC x Pilates Club Collab",
         date: "February 2 5-6 PM, 2026",
         image: "/group/2016.png",
         description:
           "WE HEARD 2016 IS BACK 💿✨ Join us for our 2016s themed Pilates class and dress like it’s a throwback year we all lowkey miss.",
-        featured: true,
+        featured: false,
       },
       {
         title: "Pop Up Pilates",

@@ -89,7 +89,7 @@ const Hero = () => {
                       </Link>
                     </motion.div>
                   </div>
-                  
+
                   {/* Right photo frame */}
                   <motion.div
                     initial={{ opacity: 0, x: 50, rotate: 8 }}
@@ -115,8 +115,15 @@ const Hero = () => {
 
         {/* Decorative Wave Divider */}
         <div className="relative h-24">
-          <svg className="absolute bottom-0 w-full h-24" preserveAspectRatio="none" viewBox="0 0 1200 120">
-            <path d="M0,0 C300,80 600,80 900,40 C1050,20 1150,0 1200,0 L1200,120 L0,120 Z" fill="#e0f4ff" />
+          <svg
+            className="absolute bottom-0 w-full h-24"
+            preserveAspectRatio="none"
+            viewBox="0 0 1200 120"
+          >
+            <path
+              d="M0,0 C300,80 600,80 900,40 C1050,20 1150,0 1200,0 L1200,120 L0,120 Z"
+              fill="#e0f4ff"
+            />
           </svg>
         </div>
 
@@ -162,7 +169,7 @@ const Hero = () => {
                   Swipe through memories from our Exec Retreat!
                 </p>
               </motion.div>
-              
+
               {/* Right: CardSwap Animated Cards */}
               <motion.div
                 initial={{ opacity: 0, x: 50 }}
@@ -189,7 +196,8 @@ const Hero = () => {
                           Student-Focused Classes
                         </h3>
                         <p className="text-center text-cyan-600">
-                          Pilates classes designed to fit your busy student schedule.
+                          Pilates classes designed to fit your busy student
+                          schedule.
                         </p>
                       </div>
                     </Card>
@@ -229,7 +237,7 @@ const Hero = () => {
                         </p>
                       </div>
                     </Card>
-                  </CardSwap> 
+                  </CardSwap>
                 </div>
               </motion.div>
             </div>
@@ -238,8 +246,15 @@ const Hero = () => {
 
         {/* Decorative Wave Divider */}
         <div className="relative h-24">
-          <svg className="absolute top-0 w-full h-24" preserveAspectRatio="none" viewBox="0 0 1200 120">
-            <path d="M0,120 C300,40 600,40 900,80 C1050,100 1150,120 1200,120 L1200,0 L0,0 Z" fill="#c8ecff" />
+          <svg
+            className="absolute top-0 w-full h-24"
+            preserveAspectRatio="none"
+            viewBox="0 0 1200 120"
+          >
+            <path
+              d="M0,120 C300,40 600,40 900,80 C1050,100 1150,120 1200,120 L1200,0 L0,0 Z"
+              fill="#c8ecff"
+            />
           </svg>
         </div>
 
@@ -257,12 +272,55 @@ const Hero = () => {
                 About Us
               </h2>
               <p className="text-lg md:text-xl text-cyan-800 max-w-3xl mx-auto leading-relaxed mb-4">
-                At the UBC Pilates Club, we aim to offer pilates as an <span className="font-semibold text-cyan-900">affordable, accessible, and fun</span> method to get active and let loose, all while getting in a killer workout.
-              </p>
-              <p className="text-lg md:text-xl text-cyan-800 max-w-3xl mx-auto leading-relaxed">
-                Our POP Pilates classes take traditional Pilates moves and set them to music so that it feels less like exercise and more like a <span className="font-semibold text-cyan-900">dance party!</span> 
+                At the UBC Pilates Club, we aim to offer pilates as an{" "}
+                <span className="font-semibold text-cyan-900">
+                  affordable, accessible, and fun
+                </span>{" "}
+                method to get active and let loose, all while getting in a
+                killer workout.
               </p>
             </motion.div>
+
+            {/* Video Embed */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: false, amount: 0.3 }}
+              transition={{ duration: 0.8 }}
+              className="flex justify-center mb-12"
+            >
+              <div className="w-full max-w-4xl">
+                <div className="relative rounded-2xl overflow-hidden shadow-2xl border-4 border-cyan-200 bg-white p-2">
+                  <div className="relative w-full" style={{ paddingBottom: '56.25%' }}>
+                    <iframe
+                      className="absolute top-0 left-0 w-full h-full rounded-lg"
+                      src="https://youtu.be/j1TsVklJMl0"
+                      title="UBC Pilates Club - About Us"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowFullScreen
+                    ></iframe>
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: false, amount: 0.3 }}
+              transition={{ duration: 0.6 }}
+              className="text-center mb-0"
+            >
+              <p className="text-lg md:text-xl text-cyan-800 max-w-3xl mx-auto leading-relaxed">
+                Our POP Pilates classes take traditional Pilates moves and set
+                them to music so that it feels less like exercise and more like
+                a{" "}
+                <span className="font-semibold text-cyan-900">
+                  dance party!
+                </span>
+              </p>
+            </motion.div>
+
             <motion.div
               initial={{ opacity: 0, scale: 0.95 }}
               whileInView={{ opacity: 1, scale: 1 }}
@@ -277,8 +335,15 @@ const Hero = () => {
 
         {/* Decorative Wave Divider */}
         <div className="relative h-24 bg-[#3880c8]">
-          <svg className="absolute top-0 w-full h-24" preserveAspectRatio="none" viewBox="0 0 1200 120">
-            <path d="M0,120 C300,40 600,40 900,80 C1050,100 1150,120 1200,120 L1200,0 L0,0 Z" fill="#d9f7ff" />
+          <svg
+            className="absolute top-0 w-full h-24"
+            preserveAspectRatio="none"
+            viewBox="0 0 1200 120"
+          >
+            <path
+              d="M0,120 C300,40 600,40 900,80 C1050,100 1150,120 1200,120 L1200,0 L0,0 Z"
+              fill="#d9f7ff"
+            />
           </svg>
         </div>
 
@@ -297,11 +362,15 @@ const Hero = () => {
               Ready to Start Your Pilates Journey?
             </h2>
             <p className="text-xl md:text-2xl text-cyan-100 mb-10 max-w-2xl mx-auto leading-relaxed">
-              Join UBC Pilates Club for a class and experience the benefits of pilates with fellow students!
+              Join UBC Pilates Club for a class and experience the benefits of
+              pilates with fellow students!
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="/prices" aria-label="Sign up for UBC Pilates Club membership">
+              <Link
+                href="/prices"
+                aria-label="Sign up for UBC Pilates Club membership"
+              >
                 <motion.button
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
