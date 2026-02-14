@@ -291,10 +291,13 @@ const Hero = () => {
             >
               <div className="w-full max-w-4xl">
                 <div className="relative rounded-2xl overflow-hidden shadow-2xl border-4 border-cyan-200 bg-white p-2">
-                  <div className="relative w-full" style={{ paddingBottom: '56.25%' }}>
+                  <div
+                    className="relative w-full"
+                    style={{ paddingBottom: "56.25%" }}
+                  >
                     <iframe
                       className="absolute top-0 left-0 w-full h-full rounded-lg"
-                      src="https://youtu.be/j1TsVklJMl0"
+                      src="https://www.youtube.com/embed/j1TsVklJMl0"
                       title="UBC Pilates Club - About Us"
                       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                       allowFullScreen

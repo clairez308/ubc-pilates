@@ -94,15 +94,15 @@ const partners = [
   },
   
   
-//   {
-//     id: 8,
-//     name: "Subi",
-//     logo: "/sponsors/subi.png",
-//     description:
-//       "The easiest way to get 100% of your daily serving of vegetables.",
-//     featured: true,
-//     link: "https://getsubi.com/?ref=usuycwdt&gad_source=1&gad_campaignid=22952373108&gbraid=0AAAABBK8ydutb3u7q5pdhKZatJP24ujY2&gclid=CjwKCAiAwqHIBhAEEiwAx9cTeXly1B6b-MRP6aiA1Jyg8fQPlFs5zP6HhphyjPdJnlFRbUOzxbfhhxoCHEIQAvD_BwE",
-//   },
+  {
+    id: 8,
+    name: "Subi",
+    logo: "/sponsors/subi.png",
+    description:
+      "The easiest way to get 100% of your daily serving of vegetables.",
+    featured: true,
+    link: "https://getsubi.com/?ref=usuycwdt&gad_source=1&gad_campaignid=22952373108&gbraid=0AAAABBK8ydutb3u7q5pdhKZatJP24ujY2&gclid=CjwKCAiAwqHIBhAEEiwAx9cTeXly1B6b-MRP6aiA1Jyg8fQPlFs5zP6HhphyjPdJnlFRbUOzxbfhhxoCHEIQAvD_BwE",
+  },
 //   {
 //     id: 9,
 //     name: "Guru Energy Drink",
@@ -188,14 +188,14 @@ const partners = [
 //     featured: false,
 //     link: "https://www.thehotboxyoga.com/",
 //   },
-  {
-    id: 22,
-    name: "Body Energy Club",
-    logo: "/sponsors/body.svg",
-    featured: true,
-    description: "We’re more than a vitamin, supplement and health food store, we’re a lifestyle.",
-    link: "https://www.bodyenergyclub.com/",
-  },
+//   {
+//     id: 22,
+//     name: "Body Energy Club",
+//     logo: "/sponsors/body.svg",
+//     featured: true,
+//     description: "We’re more than a vitamin, supplement and health food store, we’re a lifestyle.",
+//     link: "https://www.bodyenergyclub.com/",
+//   },
   {
     id: 23,
     name: "Rumble Boxing",
@@ -204,14 +204,14 @@ const partners = [
     description: "We’re more than a vitamin, supplement and health food store, we’re a lifestyle.",
     link: "https://rumbleboxing.com/vancouver",
   },
-//   {
-//     id: 24,
-//     name: "Organika",
-//     logo: "/sponsors/organika.png",
-//     featured: true,
-//     description: "We’re more than a vitamin, supplement and health food store, we’re a lifestyle.",
-//     link: "https://organika.com/?srsltid=AfmBOorAz69cU69LBblxzCMIUo1payp17Z9FvNw1-MR26n5OTW274wFg",
-//   },
+  {
+    id: 24,
+    name: "Organika",
+    logo: "/sponsors/organika.png",
+    featured: true,
+    description: "We’re more than a vitamin, supplement and health food store, we’re a lifestyle.",
+    link: "https://organika.com/?srsltid=AfmBOorAz69cU69LBblxzCMIUo1payp17Z9FvNw1-MR26n5OTW274wFg",
+  },
 {
     id: 4,
     name: "CVC",
@@ -253,6 +253,39 @@ const partners = [
     description: "Get your glow on with Skoah's personalized facial treatments and skincare products.",
     link: "https://www.skoah.com/?gad_source=1&gad_campaignid=23165272929&gbraid=0AAAAABjXeSpU7Y5IUNozjAuJfPIhckRRc&gclid=Cj0KCQiAoZDJBhC0ARIsAERP-F8iBV5l52iWP_F2ID6KA2x1PO4X51Waz__iZ3XCADXudkzFbdE-2l0aAhxLEALw_wcB",
   },
+  {
+    id: 30,
+    name: "OHME!",
+    logo: "/sponsors/ohme.avif",
+    featured: true,
+    description: "Vancouver-based freeze-dried healthy snacks brand that offers freeze-dried fruits and yogurt crunches that burst with natural flavours.",
+    link: "https://www.ohmefoods.com/",
+  },
+  {
+    id: 31,
+    name: "FitBite Chips",
+    logo: "/sponsors/fitbite.avif",
+    featured: true,
+    description: "FitBite Chips uses fresh cassava roots as its primary ingredient and is one of the best healthy alternatives to traditional potato chips.",
+    link: "https://fitbitechips.com/",
+  },
+  {
+    id: 32,
+    name: "Good Protein",
+    logo: "/sponsors/goodprotein.webp",
+    featured: true,
+    description: "Good Protein offers 100% natural, plant-based shakes and wellness products.",
+    link: "https://goodprotein.ca",
+  },
+  {
+    id: 33,
+    name: "Raw Nutritional",
+    logo: "/sponsors/raw.png",
+    featured: true,
+    description: "RAW Nutritional offers high-quality and nutrient-dense plant-based protein for your health journey.",
+    link: "https://rawnutritional.com/",
+  },
+
   
 ];
 
