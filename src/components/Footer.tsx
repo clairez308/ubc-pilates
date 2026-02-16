@@ -18,12 +18,12 @@ const Footer = () => {
   };
 
   return (
-    <footer className="relative bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white overflow-hidden">
+    <footer className="relative bg-gradient-to-br from-blue-100 via-sky-100 to-blue-200 text-slate-800 overflow-hidden">
       {/* Background Pattern */}
-      <div className="absolute inset-0 opacity-5">
-        <div className="absolute top-10 left-10 w-32 h-32 bg-cyan-400 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-20 right-20 w-48 h-48 bg-blue-400 rounded-full blur-3xl"></div>
-        <div className="absolute top-1/2 left-1/3 w-24 h-24 bg-teal-400 rounded-full blur-2xl"></div>
+      <div className="absolute inset-0 opacity-20">
+        <div className="absolute top-10 left-10 w-32 h-32 bg-cyan-200 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-20 right-20 w-48 h-48 bg-blue-200 rounded-full blur-3xl"></div>
+        <div className="absolute top-1/2 left-1/3 w-24 h-24 bg-teal-200 rounded-full blur-2xl"></div>
       </div>
 
       <div className="relative z-10">
@@ -48,17 +48,17 @@ const Footer = () => {
                     />
                   </div>
                   <div>
-                    <h3 className="text-2xl font-black text-white">
+                    <h3 className="text-2xl font-black text-slate-600">
                       UBC Pilates Club
                     </h3>
-                    <p className="text-slate-400 text-sm">
+                    <p className="text-slate-600 text-sm">
                       POP Pilates for students
                     </p>
                   </div>
                 </div>
 
                 {/* Contact Info */}
-                <div className="space-y-3 text-slate-300">
+                <div className="space-y-3 text-slate-700">
                   <div className="flex items-center gap-3">
                     <span className="text-cyan-400">📧</span>
                     <span>ubcpilatesclub@gmail.com</span>
@@ -81,17 +81,17 @@ const Footer = () => {
               transition={{ duration: 0.6, delay: 0.3 }}
             >
               <div className="max-w-md mx-auto text-center lg:text-left lg:mx-0">
-                <h4 className="text-lg font-bold text-white mb-4">
+                <h4 className="text-lg font-bold text-slate-600 mb-4">
                   Subscribe to our Newsletter!
                 </h4>
-                <p className="text-slate-300 mb-4">
+                <p className="text-slate-500 mb-4">
                   Get the latest news about our classes and events!!
                 </p>
                 <a
                   href="https://forms.gle/B1tJAyRZMk7cyghg7"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-block px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:shadow-lg transition-all duration-300"
+                  className="inline-block px-6 py-3 bg-blue-500 hover:bg-blue-600 text-white shadow-md hover:shadow-lg font-semibold rounded-lg hover:shadow-lg transition-all duration-300"
                 >
                   Sign Up via Google Form
                 </a>
@@ -132,7 +132,7 @@ const Footer = () => {
         </div>
 
         {/* Bottom Bar */}
-        <div className="border-t border-slate-700 bg-slate-900/50">
+        <div className="border-t border-blue-200 bg-blue-50/60">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
             <div className="flex flex-col lg:flex-row items-center justify-between gap-4">
               {/* Social Links */}
@@ -143,7 +143,7 @@ const Footer = () => {
                     href={url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className={`w-10 h-10 bg-aqua rounded-lg flex items-center justify-center text-slate-400 transition-all duration-300 hover:bg-lightyellow`}
+                    className={`w-10 h-10 bg-white/70 backdrop-blur-sm rounded-lg flex items-center justify-center shadow-sm hover:bg-white transition-all duration-300 border border-blue-300`}
                   >
                     <Image
                       src={`/${platform}.avif`}
@@ -156,7 +156,7 @@ const Footer = () => {
               </div>
 
               {/* Copyright */}
-              <div className="text-slate-400 text-sm text-center lg:text-right">
+              <div className="text-slate-500 text-sm text-center lg:text-right">
                 <p>
                   © {new Date().getFullYear()} UBC Pilates Club. All rights
                   reserved.
