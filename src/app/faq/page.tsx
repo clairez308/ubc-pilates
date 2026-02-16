@@ -1,6 +1,6 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 import React, { useState } from "react";
 
 const faqItems = [
@@ -20,7 +20,7 @@ const faqItems = [
     id: 3,
     question: "How do I join the UBC Pilates Club?",
     answer:
-      "You can purchase a membership either online or at one of our classes. To purchase online, see the prices tab above. To purchase at one of our classes, ask one of our execs at the desk when you check in. To participate in a class, everyone is also required to pay the small attendance fee ($3 for members, $6 for non-members) at the door before entering.",
+      "You can purchase a membership either online or at one of our classes. To purchase online, see the prices tab above. To purchase at one of our classes, ask one of our execs at the desk when you check in. To participate in a class, everyone is also required to pay the small attendance fee at the door before entering.",
   },
   {
     id: 4,
@@ -32,16 +32,15 @@ const faqItems = [
     id: 5,
     question: "When are your classes?",
     answer:
-      "Check our calendar page to see the time and location of our next class. You can also click here to sign up for our bi-weekly newsletter which includes information about upcoming classes, events and more!",
+      "Check our calendar page to see the time and location of our next class. You can also sign up for our bi-weekly newsletter which includes information about upcoming classes, events and more (sign up below)!",
   },
   {
     id: 6,
     question: "If I'm not a member can I still attend classes?",
     answer:
-      "Of course! We welcome all drop ins, and each class costs only $6 for non-members.",
+      "Of course! We welcome all drop ins - see the Prices page for cost for non-members.",
   },
 ];
-
 
 export default function FaqPage() {
   const [openItemId, setOpenItemId] = useState<number | null>(null);
@@ -51,40 +50,92 @@ export default function FaqPage() {
   };
 
   return (
-    <div className="max-w-4xl mx-auto py-16 px-4">
-        <motion.h2
-          className="text-4xl font-bold text-center text-[#224e70] mb-10"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.6 }}
-        >
-          Frequently Asked Questions
-        </motion.h2>
+    <div className="min-h-screen bg-gradient-to-b from-blue-50 via-white to-blue-50/30 py-20 px-4">
+      <motion.h2
+        className="text-4xl font-bold text-center text-[#224e70] mb-10"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.6 }}
+      >
+        Frequently Asked Questions
+      </motion.h2>
 
-      {/* FAQ Items */}
-      <div className="space-y-4">
-        {faqItems.map((item) => (
-          <div
-            key={item.id}
-            className="bg-white rounded-lg shadow-md overflow-hidden"
-          >
-            <button
-              className="w-full text-left p-5 flex justify-between items-center focus:outline-none"
-              onClick={() => handleToggle(item.id)}
+       {/* FAQ Items */}
+       <div className="space-y-4 max-w-4xl mx-auto">
+          {faqItems.map((item, index) => (
+            <motion.div
+              key={item.id}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.4, delay: index * 0.1 }}
             >
-              <h3 className="font-bold text-lg">{item.question}</h3>
-              <span className="text-navy text-xl">
-                {openItemId === item.id ? "−" : "+"}
-              </span>
-            </button>
-            {openItemId === item.id && (
-              <div className="px-5 pb-5 text-gray-700">
-                <p>{item.answer}</p>
+              <div
+                className={`bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 border-2 ${
+                  openItemId === item.id
+                    ? "border-[#224e70]"
+                    : "border-transparent"
+                }`}
+              >
+                <button
+                  className="w-full text-left p-6 flex justify-between items-center focus:outline-none group"
+                  onClick={() => handleToggle(item.id)}
+                >
+                  <h3 className="font-semibold text-lg md:text-xl text-gray-800 pr-4 group-hover:text-[#224e70] transition-colors">
+                    {item.question}
+                  </h3>
+                  <motion.div
+                    animate={{ rotate: openItemId === item.id ? 180 : 0 }}
+                    transition={{ duration: 0.3 }}
+                    className="flex-shrink-0"
+                  >
+                    <div
+                      className={`w-10 h-10 rounded-full flex items-center justify-center transition-all ${
+                        openItemId === item.id
+                          ? "bg-[#224e70] text-white"
+                          : "bg-blue-50 text-[#224e70] group-hover:bg-blue-100"
+                      }`}
+                    >
+                      <svg
+                        width="20"
+                        height="20"
+                        viewBox="0 0 20 20"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M5 7.5L10 12.5L15 7.5"
+                          stroke="currentColor"
+                          strokeWidth="2"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                        />
+                      </svg>
+                    </div>
+                  </motion.div>
+                </button>
+
+                <AnimatePresence>
+                  {openItemId === item.id && (
+                    <motion.div
+                      initial={{ height: 0, opacity: 0 }}
+                      animate={{ height: "auto", opacity: 1 }}
+                      exit={{ height: 0, opacity: 0 }}
+                      transition={{ duration: 0.3 }}
+                      className="overflow-hidden"
+                    >
+                      <div className="px-6 pb-6 pt-2">
+                        <div className="w-16 h-1 bg-gradient-to-r from-[#224e70] to-[#4a90e2] mb-4"></div>
+                        <p className="text-gray-700 leading-relaxed">
+                          {item.answer}
+                        </p>
+                      </div>
+                    </motion.div>
+                  )}
+                </AnimatePresence>
               </div>
-            )}
-          </div>
-        ))}
-      </div>
+            </motion.div>
+          ))}
+        </div>
     </div>
   );
 }
