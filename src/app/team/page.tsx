@@ -12,13 +12,6 @@ const teamMembers = [
       "My name is Simren, a 3rd year neuroscience student and the co-president of the UBC Pilates Club this year! Outside of school, I love going to concerts, eating, and crocheting! I am super excited to continue bringing affordable, accessible, and fun pilates classes and events to the UBC community.",
   },
   {
-    name: "Vivian Tuan",
-    role: "Co-President",
-    image: "/team/vivian.jpg",
-    description:
-      "Meet Vivian, this club’s incredible Co-President, whom you may occasionally catch playing Infinite Stairs on her phone. She is in her third year of psychology and cannot wait to begin pilates with the girlies! Vivian is quite the Blue Chip fan, as well. Here is one for the fruit lovers: “My favourite fruits are cherry tomatoes, guava and Granny Smiths!”",
-  },
-  {
     name: "Mauli Sood",
     role: "Senior Pilates Instructor",
     image: "/team/mauli.jpg",
@@ -102,18 +95,6 @@ const teamMembers = [
     role: "Newsletter Director",
     image: "/team/sofia.jpg",
     description: "I’m a third year poli sci/philosophy student! I loveeeeeeeee this team, and I love how accessible and modifiable Pilates can be so that everyone can partake! I enjoy exploring new grocery stores and talking about the weather",
-  },
-  {
-    name: "Lucas Chan",
-    role: "Videographer + Video Editor",
-    image: "/team/lucas.jpg",
-    description: "Hey! I'm Lucas and I'm the videographer/video editor for UBC Pilates. I'm in 3rd year biochemistry and I really enjoy doing videography and editing (who could've guessed🧐). Pilates has a great community so hope to see you at classes!",
-  },
-  {
-    name: "Taylor Chow",
-    role: "Photographer",
-    image: "/team/taylor.jpg",
-    description: "Hi UBC Pilates Club! I am the executive photographer. I’m a 3rd year, majoring in Applied Animal Biology. I love Pilates because it’s both great exercise and it’s fun/flexible for all experience levels. A fun fact about me is that I work in films/TV. Keep an eye out for me on your TV screen! ",
   },
   {
     name: "Claire Zhang",

@@ -212,15 +212,15 @@ const partners = [
     description: "We’re more than a vitamin, supplement and health food store, we’re a lifestyle.",
     link: "https://organika.com/?srsltid=AfmBOorAz69cU69LBblxzCMIUo1payp17Z9FvNw1-MR26n5OTW274wFg",
   },
-{
-    id: 4,
-    name: "CVC",
-    logo: "/sponsors/cvc.avif",
-    description:
-      "One of the biggest and most dynamic social clubs on campus, helping you make the most of your university experience.",
-    featured: true,
-    link: "https://www.instagram.com/ubc.cvc/?hl=en",
-  },
+// {
+//     id: 4,
+//     name: "CVC",
+//     logo: "/sponsors/cvc.avif",
+//     description:
+//       "One of the biggest and most dynamic social clubs on campus, helping you make the most of your university experience.",
+//     featured: true,
+//     link: "https://www.instagram.com/ubc.cvc/?hl=en",
+//   },
   {
     id: 26,
     name: "Barry's",
