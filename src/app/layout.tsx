@@ -30,23 +30,23 @@ export const metadata: Metadata = {
       "affordable pilates classes", "UBC wellness", "university pilates", 
       "student fitness Vancouver"
     ],
-    authors: [{ name: "UBC Pilates Club", url: "https://ubcpilates.club" }],
+    authors: [{ name: "UBC Pilates Club", url: "https://ubcpilatesclub.vercel.app" }],
     creator: "UBC Pilates Club",
     publisher: "UBC Pilates Club",
-    metadataBase: new URL('https://ubcpilates.club'),
+    metadataBase: new URL('https://ubcpilatesclub.vercel.app'),
     alternates: {
-      canonical: 'https://ubcpilates.club',
+      canonical: 'https://ubcpilatesclub.vercel.app',
     },
     openGraph: {
       title: 'UBC Pilates Club',
       description: 'POP Pilates classes designed for students, by students. All levels welcome!',
       type: 'website',
       locale: 'en_CA',
-      url: 'https://ubcpilates.club',
+      url: 'https://ubcpilatesclub.vercel.app',
       siteName: 'UBC Pilates Club',
       images: [
         {
-          url: '/og-image.jpg',
+          url: '/logo.png',
           width: 1200,
           height: 630,
           alt: 'UBC Pilates Club'
@@ -57,7 +57,7 @@ export const metadata: Metadata = {
       card: 'summary_large_image',
       title: 'UBC Pilates Club',
       description: 'POP Pilates classes designed for students, by students. All levels welcome!',
-      images: ['/og-image.jpg'],
+      images: ['/logo.png'],
     },
     robots: {
       index: true,
@@ -93,7 +93,7 @@ export default function RootLayout({
               name: "UBC Pilates Club",
               description:
                 "POP Pilates classes designed for students, by students. All levels welcome!",
-              url: "https://ubcpilates.club",
+              url: "https://ubcpilatesclub.vercel.app",
               email: "ubcpilatesclub@gmail.com",
               address: {
                 "@type": "PostalAddress",
@@ -178,23 +178,7 @@ export default function RootLayout({
 
         {/* Favicon and app icons */}
         <link rel="icon" type="image/x-icon" href="/favicon.ico" />
-        <link
-          rel="apple-touch-icon"
-          sizes="180x180"
-          href="/apple-touch-icon.png"
-        />
-        <link
-          rel="icon"
-          type="image/png"
-          sizes="32x32"
-          href="/favicon-32x32.png"
-        />
-        <link
-          rel="icon"
-          type="image/png"
-          sizes="16x16"
-          href="/favicon-16x16.png"
-        />
+        <link rel="apple-touch-icon" href="/logo.png" />
         <link rel="manifest" href="/site.webmanifest" />
       </head>
       <body

@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   title: 'UBC Pilates Club',
   description: 'We offer POP pilates as an affordable, accessible and fun method to get active for students.',
   alternates: {
-    canonical: 'https://www.ubcpilates.club/',
+    canonical: 'https://ubcpilatesclub.vercel.app/',
   },
 };
 
