@@ -5,6 +5,7 @@ import Link from "next/link";
 import Stack from "./Stack";
 import CardSwap, { Card } from "./CardSwap";
 import RollingGallery from "./RollingGallery";
+import FreeClasses from "./FreeClasses";
 
 const retreatImages = [
   { id: 1, img: "/retreat/retreat1.jpeg" },
@@ -112,6 +113,22 @@ const Hero = () => {
             </div>
           </div>
         </div>
+
+        {/* Decorative Wave Divider */}
+        <div className="relative h-24">
+          <svg
+            className="absolute bottom-0 w-full h-24"
+            preserveAspectRatio="none"
+            viewBox="0 0 1200 120"
+          >
+            <path
+              d="M0,0 C300,80 600,80 900,40 C1050,20 1150,0 1200,0 L1200,120 L0,120 Z"
+              fill="#e0f4ff"
+            />
+          </svg>
+        </div>
+
+        <FreeClasses />
 
         {/* Decorative Wave Divider */}
         <div className="relative h-24">
