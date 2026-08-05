@@ -1,21 +1,21 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { DM_Serif_Display, Montserrat } from "next/font/google";
+import { MotionConfig } from "framer-motion";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const dmSerifDisplay = DM_Serif_Display({
+  weight: "400",
+  variable: "--font-heading",
   subsets: ["latin"],
   display: "swap",
-  preload: true,
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const montserrat = Montserrat({
+  variable: "--font-body",
   subsets: ["latin"],
   display: "swap",
-  preload: false,
 });
 
 export const metadata: Metadata = {
@@ -149,19 +149,6 @@ export default function RootLayout({
             }),
           }}
         />
-        {/* Critical font preloading */}
-        <link
-          rel="preload"
-          href="https://fonts.googleapis.com/css2?family=Geist:wght@400;700;900&display=swap"
-          as="style"
-        />
-        <link
-          rel="preload"
-          href="https://fonts.gstatic.com"
-          as="connect"
-          crossOrigin="anonymous"
-        />
-
         {/* Third-party performance optimization */}
         <link rel="preconnect" href="https://widgets.sociablekit.com" />
         <link rel="preconnect" href="https://images.sociablekit.com" />
@@ -182,12 +169,17 @@ export default function RootLayout({
         <link rel="manifest" href="/site.webmanifest" />
       </head>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${dmSerifDisplay.variable} ${montserrat.variable} antialiased`}
         suppressHydrationWarning
       >
-        <Navbar />
-        {children}
-        <Footer />
+        <a href="#main-content" className="skip-link">
+          Skip to main content
+        </a>
+        <MotionConfig reducedMotion="user">
+          <Navbar />
+          <main id="main-content">{children}</main>
+          <Footer />
+        </MotionConfig>
       </body>
     </html>
   );

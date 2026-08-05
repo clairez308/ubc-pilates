@@ -162,18 +162,26 @@ export default function TeamPage() {
   //   const [hoveredCard, setHoveredCard] = useState(null);
 
   return (
-    <div className="max-w-6xl mx-auto py-16 px-4">
-      <motion.h2
-        className="text-4xl font-bold text-center text-[#224e70] mb-10"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
+    <div className="max-w-6xl mx-auto py-16 px-4 bg-cream">
+      <motion.h1
+        className="font-heading text-4xl text-center text-ink mb-10 tracking-tight"
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
       >
         Meet Our Team
-      </motion.h2>
+      </motion.h1>
       <div className="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
         {teamMembers.map((member, idx) => (
-          <FlipCard key={idx} member={member} />
+          <motion.div
+            key={idx}
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: false, amount: 0.3 }}
+            transition={{ duration: 0.5, delay: (idx % 6) * 0.08 }}
+          >
+            <FlipCard member={member} />
+          </motion.div>
         ))}
       </div>
     </div>
@@ -190,10 +198,12 @@ function FlipCard({ member }: { member: TeamMember }) {
   const [flipped, setFlipped] = useState(false);
 
   return (
-    <div
+    <motion.div
       className="group perspective"
       onMouseEnter={() => setFlipped(true)}
       onMouseLeave={() => setFlipped(false)}
+      whileHover={{ scale: 1.03 }}
+      transition={{ duration: 0.3 }}
     >
       <motion.div
         className={`relative w-full h-60 transition-transform duration-700 transform-style preserve-3d ${
@@ -201,8 +211,11 @@ function FlipCard({ member }: { member: TeamMember }) {
         }`}
       >
         {/* Front */}
-        <div className="absolute w-full h-full backface-hidden bg-[#cbeafc] rounded-2xl shadow-lg p-4 text-center flex flex-col justify-center items-center">
-          <div className="w-24 h-24 sm:w-28 sm:h-28 md:w-32 md:h-32 lg:w-36 lg:h-36 rounded-full overflow-hidden border-4 border-[#ddfcf7] mb-4 mx-auto">
+        <div
+          className="absolute w-full h-full backface-hidden bg-white rounded-xl border-2 border-ink p-4 text-center flex flex-col justify-center items-center"
+          style={{ boxShadow: "4px 4px 0 0 #004669" }}
+        >
+          <div className="w-24 h-24 sm:w-28 sm:h-28 md:w-32 md:h-32 lg:w-36 lg:h-36 rounded-full overflow-hidden border-2 border-ink mb-4 mx-auto">
             <img
               src={member.image}
               alt={member.name}
@@ -210,20 +223,21 @@ function FlipCard({ member }: { member: TeamMember }) {
             />
           </div>
 
-          <h3 className="text-lg font-semibold text-[#224e70]">
-            {member.name}
-          </h3>
-          <p className="text-[#224e70] text-sm">{member.role}</p>
+          <h3 className="text-lg font-bold text-ink">{member.name}</h3>
+          <p className="text-denim text-sm font-medium">{member.role}</p>
         </div>
 
         {/* Back */}
-        <div className="absolute w-full h-full backface-hidden rotate-y-180 bg-white rounded-2xl shadow-lg p-6 text-center flex flex-col justify-center items-center">
-          <h3 className="text-lg font-semibold text-denim mb-2">
+        <div
+          className="absolute w-full h-full backface-hidden rotate-y-180 bg-skyblue rounded-xl border-2 border-ink p-6 text-center flex flex-col justify-center items-center"
+          style={{ boxShadow: "4px 4px 0 0 #004669" }}
+        >
+          <h3 className="text-lg font-bold text-ink mb-2">
             {member.name}
           </h3>
-          <p className="text-sm text-gray-700">{member.description}</p>
+          <p className="text-sm text-ink/70">{member.description}</p>
         </div>
       </motion.div>
-    </div>
+    </motion.div>
   );
 }

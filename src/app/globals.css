@@ -1,33 +1,76 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #f2f2f2;
+  --foreground: #004669;
 
-  --color-skyblue: #c5e4f4;
-  --color-denim: #74a7d9;
-  --color-aqua: #d2f3f1;
-  --color-navy: #224e70;
-  --color-lightyellow: #fef6ac;
+  /* Club brand palette */
+  --color-cream: #f2f2f2; /* light grey background */
+  --color-skyblue: #def5ff; /* light blue background */
+  --color-aqua: #bde0ef; /* deeper light blue background */
+  --color-lightyellow: #fef6ac; /* light yellow, for highlights only */
+
+  /* Brand text color, reused for borders/shadows/buttons */
+  --color-ink: #004669;
+  --color-navy: #004669;
+  --color-denim: #004669;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-cream: var(--color-cream);
+  --color-ink: var(--color-ink);
   --color-skyblue: var(--color-skyblue);
   --color-denim: var(--color-denim);
   --color-aqua: var(--color-aqua);
   --color-navy: var(--color-navy);
   --color-lightyellow: var(--color-lightyellow);
 
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-sans: var(--font-body);
+  --font-heading: var(--font-heading);
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-body), Montserrat, "Open Sans", Arial, sans-serif;
+}
+
+/* Tactile "hard shadow" treatment for cards and buttons */
+.shadow-hard {
+  box-shadow: 4px 4px 0 0 var(--color-ink);
+}
+
+.shadow-hard-sm {
+  box-shadow: 3px 3px 0 0 var(--color-ink);
+}
+
+/* Skip link: hidden until keyboard-focused */
+.skip-link {
+  position: absolute;
+  left: 1rem;
+  top: -3rem;
+  z-index: 100;
+  background: var(--color-navy);
+  color: white;
+  padding: 0.75rem 1.25rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  transition: top 0.2s ease;
+}
+
+.skip-link:focus {
+  top: 1rem;
+}
+
+/* Visible focus ring for keyboard navigation */
+a:focus-visible,
+button:focus-visible,
+[tabindex]:focus-visible {
+  outline: 2px solid var(--color-navy);
+  outline-offset: 2px;
+  border-radius: 2px;
 }
 
 /* Enables 3D flip effects */
@@ -52,12 +95,6 @@ body {
     /* Prevent layout shift */
     min-height: 400px;
     background: #f8f9fa;
-  }
-  
-  /* Optimize font loading */
-  @font-face {
-    font-family: 'Geist';
-    font-display: swap;
   }
   
   /* Reduce cumulative layout shift */

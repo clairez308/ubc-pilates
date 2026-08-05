@@ -207,64 +207,76 @@ export default function EventsPage() {
   const regularEvents = events.filter((event) => !event.featured);
 
   return (
-    <div className="max-w-5xl mx-auto py-16 px-4">
-      <motion.h2
-        className="text-4xl font-bold text-center text-[#224e70] mb-10"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
+    <div className="max-w-5xl mx-auto py-16 px-4 bg-cream">
+      <motion.h1
+        className="font-heading text-4xl text-center text-ink mb-10 tracking-tight"
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
       >
         Our Events
-      </motion.h2>
+      </motion.h1>
 
       {/* Featured Events */}
       <div className="mb-16">
-        <h2 className="text-2xl font-bold mb-6 text-denim">Upcoming Events</h2>
+        <h2 className="font-heading text-2xl mb-6 text-ink">Upcoming Events</h2>
         <div className="grid md:grid-cols-2 gap-8">
           {featuredEvents.map((event, index) => (
-            <div
+            <motion.div
               key={index}
-              className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow"
+              className="bg-white rounded-xl border-2 border-ink overflow-hidden"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: false, amount: 0.3 }}
+              whileHover={{ y: -4, boxShadow: "6px 6px 0 0 #004669" }}
+              style={{ boxShadow: "4px 4px 0 0 #004669" }}
+              transition={{ duration: 0.5, delay: (index % 2) * 0.1 }}
             >
-                <div className="w-full h-64 overflow-hidden bg-gray-100">
-              <img
-                src={event.image}
-                alt={event.title}
-                className="w-full h-64 object-cover"
-              />
+              <div className="w-full h-64 overflow-hidden bg-cream border-b-2 border-ink">
+                <img
+                  src={event.image}
+                  alt={event.title}
+                  className="w-full h-64 object-cover"
+                />
               </div>
               <div className="p-6">
-                <h3 className="text-xl font-bold mb-2">{event.title}</h3>
-                <p className="text-denim font-medium mb-4">{event.date}</p>
-                <p className="mb-6">{event.description}</p>
+                <h3 className="text-xl font-bold mb-2 text-ink">{event.title}</h3>
+                <p className="text-denim font-bold mb-4">{event.date}</p>
+                <p className="mb-6 text-ink/70">{event.description}</p>
               </div>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>
 
       {/* Regular Events */}
       <div>
-        <h2 className="text-2xl font-bold mb-6 text-denim">Past Events</h2>
+        <h2 className="font-heading text-2xl mb-6 text-ink">Past Events</h2>
         <div className="grid md:grid-cols-3 gap-6">
           {regularEvents.map((event, index) => (
-            <div
+            <motion.div
               key={index}
-              className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow"
+              className="bg-white rounded-xl border-2 border-ink overflow-hidden"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: false, amount: 0.3 }}
+              whileHover={{ y: -4, boxShadow: "6px 6px 0 0 #004669" }}
+              style={{ boxShadow: "3px 3px 0 0 #004669" }}
+              transition={{ duration: 0.5, delay: (index % 3) * 0.08 }}
             >
-                <div className="w-full h-48 overflow-hidden bg-gray-100">
-              <img
-                src={event.image}
-                alt={event.title}
-                className="w-full h-64 object-cover"
-              />
+              <div className="w-full h-48 overflow-hidden bg-cream border-b-2 border-ink">
+                <img
+                  src={event.image}
+                  alt={event.title}
+                  className="w-full h-64 object-cover"
+                />
               </div>
               <div className="p-4">
-                <h3 className="text-lg font-bold mb-1">{event.title}</h3>
-                <p className="text-denim font-medium mb-2">{event.date}</p>
-                <p className="text-sm mb-4 line-clamp-3">{event.description}</p>
+                <h3 className="text-lg font-bold mb-1 text-ink">{event.title}</h3>
+                <p className="text-denim font-bold mb-2">{event.date}</p>
+                <p className="text-sm mb-4 line-clamp-3 text-ink/70">{event.description}</p>
               </div>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>

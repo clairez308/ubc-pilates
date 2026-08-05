@@ -11,11 +11,7 @@ export const metadata: Metadata = {
 };
 
 export default function Home() {
-  return (
-      <main>
-        <Hero />
-      </main>
-  );
+  return <Hero />;
 }
 
 // import Hero from '@/components/Hero';

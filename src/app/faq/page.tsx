@@ -1,7 +1,8 @@
 "use client";
 
 import { AnimatePresence, motion } from "framer-motion";
-import React, { useState } from "react";
+import { useState } from "react";
+import { ChevronDown } from "lucide-react";
 
 const faqItems = [
   {
@@ -50,92 +51,79 @@ export default function FaqPage() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-blue-50 via-white to-blue-50/30 py-20 px-4">
-      <motion.h2
-        className="text-4xl font-bold text-center text-[#224e70] mb-10"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
+    <div className="min-h-screen bg-cream py-20 px-4">
+      <motion.h1
+        className="font-heading text-4xl text-center text-ink mb-10 tracking-tight"
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
       >
         Frequently Asked Questions
-      </motion.h2>
+      </motion.h1>
 
-       {/* FAQ Items */}
-       <div className="space-y-4 max-w-4xl mx-auto">
-          {faqItems.map((item, index) => (
+      {/* FAQ Items */}
+      <div className="space-y-4 max-w-4xl mx-auto">
+        {faqItems.map((item, index) => {
+          const isOpen = openItemId === item.id;
+          return (
             <motion.div
               key={item.id}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.4, delay: index * 0.1 }}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: false, amount: 0.3 }}
+              transition={{ duration: 0.5, delay: index * 0.05 }}
+              whileHover={{ y: -2, boxShadow: "6px 6px 0 0 #004669" }}
+              style={{ boxShadow: "4px 4px 0 0 #004669" }}
+              className="bg-white rounded-xl border-2 border-ink overflow-hidden"
             >
-              <div
-                className={`bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 border-2 ${
-                  openItemId === item.id
-                    ? "border-[#224e70]"
-                    : "border-transparent"
-                }`}
+              <button
+                className="w-full text-left p-6 flex justify-between items-center group"
+                onClick={() => handleToggle(item.id)}
+                aria-expanded={isOpen}
+                aria-controls={`faq-answer-${item.id}`}
               >
-                <button
-                  className="w-full text-left p-6 flex justify-between items-center focus:outline-none group"
-                  onClick={() => handleToggle(item.id)}
+                <h3 className="font-bold text-lg md:text-xl text-ink pr-4">
+                  {item.question}
+                </h3>
+                <motion.div
+                  animate={{ rotate: isOpen ? 180 : 0 }}
+                  transition={{ duration: 0.3 }}
+                  className="flex-shrink-0"
                 >
-                  <h3 className="font-semibold text-lg md:text-xl text-gray-800 pr-4 group-hover:text-[#224e70] transition-colors">
-                    {item.question}
-                  </h3>
-                  <motion.div
-                    animate={{ rotate: openItemId === item.id ? 180 : 0 }}
-                    transition={{ duration: 0.3 }}
-                    className="flex-shrink-0"
+                  <div
+                    className={`w-10 h-10 rounded-full flex items-center justify-center border-2 border-ink transition-colors ${
+                      isOpen ? "bg-ink text-white" : "bg-lightyellow text-ink"
+                    }`}
                   >
-                    <div
-                      className={`w-10 h-10 rounded-full flex items-center justify-center transition-all ${
-                        openItemId === item.id
-                          ? "bg-[#224e70] text-white"
-                          : "bg-blue-50 text-[#224e70] group-hover:bg-blue-100"
-                      }`}
-                    >
-                      <svg
-                        width="20"
-                        height="20"
-                        viewBox="0 0 20 20"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          d="M5 7.5L10 12.5L15 7.5"
-                          stroke="currentColor"
-                          strokeWidth="2"
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                        />
-                      </svg>
+                    <ChevronDown className="w-5 h-5" strokeWidth={2.5} />
+                  </div>
+                </motion.div>
+              </button>
+
+              <AnimatePresence>
+                {isOpen && (
+                  <motion.div
+                    id={`faq-answer-${item.id}`}
+                    role="region"
+                    initial={{ height: 0, opacity: 0 }}
+                    animate={{ height: "auto", opacity: 1 }}
+                    exit={{ height: 0, opacity: 0 }}
+                    transition={{ duration: 0.3 }}
+                    className="overflow-hidden"
+                  >
+                    <div className="px-6 pb-6 pt-2 border-t-2 border-ink/10">
+                      <div className="w-16 h-1.5 bg-denim rounded-full mb-4 mt-4"></div>
+                      <p className="text-ink/70 leading-relaxed">
+                        {item.answer}
+                      </p>
                     </div>
                   </motion.div>
-                </button>
-
-                <AnimatePresence>
-                  {openItemId === item.id && (
-                    <motion.div
-                      initial={{ height: 0, opacity: 0 }}
-                      animate={{ height: "auto", opacity: 1 }}
-                      exit={{ height: 0, opacity: 0 }}
-                      transition={{ duration: 0.3 }}
-                      className="overflow-hidden"
-                    >
-                      <div className="px-6 pb-6 pt-2">
-                        <div className="w-16 h-1 bg-gradient-to-r from-[#224e70] to-[#4a90e2] mb-4"></div>
-                        <p className="text-gray-700 leading-relaxed">
-                          {item.answer}
-                        </p>
-                      </div>
-                    </motion.div>
-                  )}
-                </AnimatePresence>
-              </div>
+                )}
+              </AnimatePresence>
             </motion.div>
-          ))}
-        </div>
+          );
+        })}
+      </div>
     </div>
   );
 }

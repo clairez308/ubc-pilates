@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import Link from "next/link";
+import Button from "./ui/Button";
 
 const freeClasses = [
   {
@@ -40,7 +40,7 @@ const freeClasses = [
 
 const FreeClasses = () => {
   return (
-    <section className="relative py-16 sm:py-20 bg-lightyellow/25 overflow-hidden">
+    <section className="relative py-16 sm:py-20 bg-lightyellow border-y-2 border-ink overflow-hidden">
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -49,21 +49,19 @@ const FreeClasses = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-10"
         >
-          <span className="inline-block bg-[#3880c8] text-white text-sm font-bold tracking-wide uppercase py-1 px-4 rounded-full mb-4">
+          <span className="inline-block bg-ink text-white text-sm font-bold tracking-wide uppercase py-1 px-4 rounded-full mb-4">
             Free Summer Classes
           </span>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-[#0a2a43] mb-6">
+          <h2 className="font-heading text-3xl sm:text-4xl md:text-5xl text-ink mb-6 tracking-tight">
             August Free Classes 2026
           </h2>
-          <p className="text-lg text-cyan-800 max-w-3xl mx-auto leading-relaxed mb-4">
+          <p className="text-lg text-ink/80 max-w-3xl mx-auto leading-relaxed mb-4">
             We&apos;re kicking off August with{" "}
-            <span className="font-semibold text-cyan-900">
-              FREE summer classes!
-            </span>{" "}
+            <span className="font-bold text-ink">FREE summer classes!</span>{" "}
             Join us in person or online to meet our newest instructors — all
             levels welcome. 💙
           </p>
-          <p className="text-base text-navy max-w-3xl mx-auto leading-relaxed font-medium">
+          <p className="text-base text-ink max-w-3xl mx-auto leading-relaxed font-bold">
             ❗ First come, first served — mats provided for in-person classes.
           </p>
         </motion.div>
@@ -73,11 +71,11 @@ const FreeClasses = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: false, amount: 0.3 }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="overflow-x-auto rounded-2xl shadow-xl border-4 border-white bg-white"
+          className="overflow-x-auto rounded-xl border-2 border-ink shadow-[6px_6px_0_0_#004669] bg-white"
         >
           <table className="w-full text-left border-collapse min-w-[640px]">
             <thead>
-              <tr className="bg-[#3880c8] text-white">
+              <tr className="bg-aqua text-ink border-b-2 border-ink">
                 <th className="py-4 px-5 font-bold">Date</th>
                 <th className="py-4 px-5 font-bold">Instructor</th>
                 <th className="py-4 px-5 font-bold">Time</th>
@@ -88,17 +86,19 @@ const FreeClasses = () => {
               {freeClasses.map((cls, index) => (
                 <tr
                   key={cls.id}
-                  className={index % 2 === 0 ? "bg-lightyellow/50" : "bg-lightyellow/25"}
+                  className={`border-t-2 border-ink/10 ${
+                    index % 2 === 0 ? "bg-white" : "bg-cream"
+                  }`}
                 >
-                  <td className="py-4 px-5 text-navy font-semibold">
+                  <td className="py-4 px-5 text-ink font-bold">
                     {cls.date}
-                    <span className="block text-sm font-normal text-denim">
+                    <span className="block text-sm font-normal text-ink/60">
                       {cls.day}
                     </span>
                   </td>
-                  <td className="py-4 px-5 text-navy">{cls.instructor}</td>
-                  <td className="py-4 px-5 text-navy">{cls.time}</td>
-                  <td className="py-4 px-5 text-navy">{cls.location}</td>
+                  <td className="py-4 px-5 text-ink">{cls.instructor}</td>
+                  <td className="py-4 px-5 text-ink">{cls.time}</td>
+                  <td className="py-4 px-5 text-ink">{cls.location}</td>
                 </tr>
               ))}
             </tbody>
@@ -112,20 +112,14 @@ const FreeClasses = () => {
           transition={{ duration: 0.6, delay: 0.4 }}
           className="flex justify-center mt-10"
         >
-          <Link
+          <Button
             href="https://www.instagram.com/ubcpilatesclub"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="Follow UBC Pilates Club on Instagram for the online class link"
+            variant="primary"
+            ariaLabel="Follow UBC Pilates Club on Instagram for the online class link (opens in new tab)"
+            className="min-w-48"
           >
-            <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="bg-[#3880c8] text-white font-bold py-4 px-8 rounded-full text-lg shadow-xl hover:shadow-2xl transition-all duration-300 min-w-48"
-            >
-              Follow Us for Updates
-            </motion.button>
-          </Link>
+            Follow Us for Updates
+          </Button>
         </motion.div>
       </div>
     </section>
