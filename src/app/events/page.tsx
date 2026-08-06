@@ -1,210 +1,75 @@
 "use client";
 
+import { useMemo, useState } from "react";
 import { motion } from "framer-motion";
-import React from "react";
+import { Search } from "lucide-react";
+import Button from "@/components/ui/Button";
+import { events } from "@/data/events";
 
-const events = [
-    {
-        title: "UBC Pilates x WiDS @ UBC: Galentine’s",
-        date: "February 4 7:30 - 8:30 PM, 2026",
-        image: "/group/wids.png",
-        description:
-          "Galentine’s Pilates with UBC Pilates x WiDS @ UBC 💗✨",
-        featured: false,
-      },
-    {
-        title: "LDC x Pilates Club Collab",
-        date: "February 2 5-6 PM, 2026",
-        image: "/group/2016.png",
-        description:
-          "WE HEARD 2016 IS BACK 💿✨ Join us for our 2016s themed Pilates class and dress like it’s a throwback year we all lowkey miss.",
-        featured: false,
-      },
-      {
-        title: "Pop Up Pilates",
-        date: "January 15, 2026",
-        image: "/group/pop up.png",
-        description:
-          "Our first FREE pop-up class of 2026!",
-        featured: false,
-      },
-    {
-        title: "Sway n' Stretch",
-        date: "January 13, 2026",
-        image: "/group/latin.png",
-        description:
-          "Latin-themed class in collaboration with UBC Latin Dance Club!",
-        featured: false,
-      }, 
-      {
-        title: "Benny Class",
-        date: "December 3, 2025",
-        image: "/group/benny.jpg",
-        description:
-          "❄️ UBC Pilates x Benny Winter Wellness Class! ❄️",
-        featured: false,
-      },       
-      {
-        title: "Wicked Themed Class",
-        date: "November 26, 2025",
-        image: "/group/wicked.jpg",
-        description:
-          "🧙‍♀️ Something Wicked is Coming… 💚💗",
-        featured: false,
-      },
-  {
-    title: "Sweet Social x POPPI",
-    date: "Thursday, November 6, 2025",
-    image: "/group/poppi.jpeg",
-    description:
-      "☕ Our first Execs & Members Social — a cozy fall evening to relax, mingle, and have some fun after class! 🍂",
-    featured: false,
-  },
-  {
-    title: "Heal Collab",
-    date: "Monday, November 3, 2025",
-    image: "/group/heal.jpeg",
-    description: "💜 UBC Pilates x HEAL collab 💜",
-    featured: false,
-  },
-  {
-    title: "Wednesday Adamms Theme Class",
-    date: "Wednesday, October 29, 5-6 PM, 2025",
-    image: "/group/wednesday.jpg",
-    description:
-      "🕸️ Something spooky is coming to the mat… 🦇Join us for a special Wednesday Addams–inspired Pilates class!💀",
-    featured: false,
-  },
-  {
-    title: "Engi-YOU",
-    date: "Monday, October 27, 4:45 - 6 PM, 2025",
-    image: "/group/engi.jpeg",
-    description:
-      "UBC Pilates x Engi-YOU Collab!! Relaxing mini canvas painting session & Pilates class.",
-    featured: false,
-  },
-  {
-    title: "Glow N' Flow",
-    date: "Monday, October 20, 5-6 PM, 2025",
-    image: "/group/glow.jpg",
-    description:
-      "🌙✨ Glow n Flow: Candlelight Pilates ✨🌙 Unwind with a calm, stretchy flow under soft candlelight.",
-    featured: false,
-  },
-  {
-    title: "Monday Haircare x Pilates",
-    date: "Thursday, October 16, 5-7 PM, 2025",
-    image: "/group/monday.jpg",
-    description:
-      "Join us for a pink-themed Pilates collab with Monday Haircare! Expect good vibes, photo ops, and exclusive goodies.",
-    featured: false,
-  },
-  {
-    title: "Bunny Pilates",
-    date: "Thursday, September 25, 2025; 12-3 PM (1hr x 3 sessions)",
-    image: "/group/bunnies.jpg",
-    description:
-      "Bunny Pilates is BACK!!! Come flow & stretch with the fluffiest workout buddies ever at the AMS Nest Performance Theatre 🐰✨",
-    featured: false,
-  },
-  {
-    title: "Clubs Fair",
-    date: "September 23-24 2025",
-    image: "/group/pilates7.jpg",
-    description:
-      "Get to know UBC Pilates Club! Check out our booth to learn more about the club & how you can participate.",
-    featured: false,
-  },
-  {
-    title: "UBC Pilates x XISC: International Themed Class",
-    date: "March 28, 2025",
-    image: "/group/pilates8.JPG",
-    description:
-      "International & Exchange Collab with XISC - music, flags, and candy from around the world.",
-    featured: false,
-  },
-  {
-    title: "UBC Pilates x Best Buddies: Spring Core & Slime",
-    date: "March 20, 2025",
-    image: "/group/slime.png",
-    description:
-      "Best Buddies and UBC Pilates present... Spring Core and Slime!",
-    featured: false,
-  },
-  {
-    title: "K-POPilates",
-    date: "March 18, 2025",
-    image: "/group/kpop.png",
-    description: "KPOP themed class!",
-    featured: false,
-  },
-  {
-    title: "bunnies x pilates",
-    date: "March 17, 2025",
-    image: "/group/bunny.jpg",
-    description:
-      "Bunnys and pilates! Join us for a fun-filled class with adorable bunnies to cuddle with after class.",
-    featured: false,
-  },
-  {
-    title: "UBC Muay Thai x Pilates: Women's History Month Event",
-    date: "March 14, 2025",
-    image: "/group/muaythai.jpeg",
-    description: "An evening of muay thai, pilates, and fun chats!",
-    featured: false,
-  },
-  {
-    title: "UBC Pilates x SISU: Key chain making & Pilates session",
-    date: "March 6, 2025",
-    image: "/group/sisu.png",
-    description:
-      "Join us for a fun-filled evening of key chain making and pilates session with SISU!",
-    featured: false,
-  },
-  {
-    title: "Merry Makers Market",
-    date: "December 4, 2024",
-    image: "/group/merrymakers.png",
-    description:
-      "Merry making with Pilates + shopping discounts from small businesses.",
-    featured: false,
-  },
-  {
-    title: "UBC Pilates x CSA: XMAS Core + Crafts",
-    date: "December 6, 2024",
-    image: "/group/xmas.png",
-    description:
-      "O Come All Ye Pilates & CSA Members to our last event of the year: a holiday collab!! There will be a photo booth, hot cocoa, gingerbread, and a core pilates class!",
-    featured: false,
-  },
-  {
-    title: "Taylor Swift & Lana Del Rey themed class",
-    date: "November 29, 2024",
-    image: "/group/taylor.jpg",
-    description:
-      "Down on the west coast, we like to to get prepared for the Eras tour as a club! Come to our class early on Friday, November 29 for bracelet making before this tribute class begins! We will be playing music from Taylor and Lana!",
-    featured: false,
-  },
-  {
-    title: "Short N' Sweet Pilates",
-    date: "November 25, 2024",
-    image: "/group/sabrina.png",
-    description:
-      "We’ll make you want to fall in love with the short n sweet themed class!!! 💎💎Where art thou?! Life 26! ❤️‍🔥❤️‍🔥",
-    featured: false,
-  },
-  {
-    title: "UBC Pilates x Get Thrifty: Wellness Event",
-    date: "October 18, 2024",
-    image: "/group/thrift.png",
-    description: "Pilates + Thrifting in one event!",
-    featured: false,
-  },
-];
+function formatDate(isoDate: string, time?: string) {
+  const [year, month, day] = isoDate.split("-").map(Number);
+  const formatted = new Date(year, month - 1, day).toLocaleDateString("en-US", {
+    month: "long",
+    day: "numeric",
+    year: "numeric",
+  });
+  return time ? `${formatted}, ${time}` : formatted;
+}
 
 export default function EventsPage() {
-  const featuredEvents = events.filter((event) => event.featured);
-  const regularEvents = events.filter((event) => !event.featured);
+  const [search, setSearch] = useState("");
+  const [selectedYear, setSelectedYear] = useState<string>("All");
+
+  // Anything dated today or later counts as upcoming; everything else is past.
+  // No manual flag to maintain — an event moves itself once its date passes.
+  const todayISO = useMemo(() => new Date().toISOString().slice(0, 10), []);
+
+  const upcomingEvents = useMemo(
+    () =>
+      events
+        .filter((event) => event.date >= todayISO)
+        .sort((a, b) => a.date.localeCompare(b.date)),
+    [todayISO]
+  );
+
+  const pastEvents = useMemo(
+    () =>
+      events
+        .filter((event) => event.date < todayISO)
+        .sort((a, b) => b.date.localeCompare(a.date)),
+    [todayISO]
+  );
+
+  const years = useMemo(
+    () =>
+      Array.from(new Set(pastEvents.map((event) => event.date.slice(0, 4)))).sort(
+        (a, b) => b.localeCompare(a)
+      ),
+    [pastEvents]
+  );
+
+  const filteredPastEvents = useMemo(() => {
+    const query = search.trim().toLowerCase();
+    return pastEvents.filter((event) => {
+      const matchesYear =
+        selectedYear === "All" || event.date.slice(0, 4) === selectedYear;
+      const matchesSearch =
+        !query ||
+        event.title.toLowerCase().includes(query) ||
+        event.description.toLowerCase().includes(query);
+      return matchesYear && matchesSearch;
+    });
+  }, [pastEvents, search, selectedYear]);
+
+  const eventsByYear = useMemo(() => {
+    const grouped = new Map<string, typeof filteredPastEvents>();
+    for (const event of filteredPastEvents) {
+      const year = event.date.slice(0, 4);
+      if (!grouped.has(year)) grouped.set(year, []);
+      grouped.get(year)!.push(event);
+    }
+    return Array.from(grouped.entries()).sort((a, b) => b[0].localeCompare(a[0]));
+  }, [filteredPastEvents]);
 
   return (
     <div className="max-w-5xl mx-auto py-16 px-4 bg-cream">
@@ -217,68 +82,152 @@ export default function EventsPage() {
         Our Events
       </motion.h1>
 
-      {/* Featured Events */}
+      {/* Upcoming Events */}
       <div className="mb-16">
         <h2 className="font-heading text-2xl mb-6 text-ink">Upcoming Events</h2>
-        <div className="grid md:grid-cols-2 gap-8">
-          {featuredEvents.map((event, index) => (
-            <motion.div
-              key={index}
-              className="bg-white rounded-xl border-2 border-ink overflow-hidden"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: false, amount: 0.3 }}
-              whileHover={{ y: -4, boxShadow: "6px 6px 0 0 #004669" }}
-              style={{ boxShadow: "4px 4px 0 0 #004669" }}
-              transition={{ duration: 0.5, delay: (index % 2) * 0.1 }}
-            >
-              <div className="w-full h-64 overflow-hidden bg-cream border-b-2 border-ink">
-                <img
-                  src={event.image}
-                  alt={event.title}
-                  className="w-full h-64 object-cover"
-                />
-              </div>
-              <div className="p-6">
-                <h3 className="text-xl font-bold mb-2 text-ink">{event.title}</h3>
-                <p className="text-denim font-bold mb-4">{event.date}</p>
-                <p className="mb-6 text-ink/70">{event.description}</p>
-              </div>
-            </motion.div>
-          ))}
-        </div>
+        {upcomingEvents.length === 0 ? (
+          <div className="bg-white rounded-xl border-2 border-ink p-8 text-center shadow-[4px_4px_0_0_#004669]">
+            <p className="text-ink/70 mb-4">
+              No upcoming events on the calendar right now — follow us on
+              Instagram to be the first to know when we announce the next one!
+            </p>
+            <div className="flex justify-center">
+              <Button
+                href="https://www.instagram.com/ubcpilatesclub"
+                variant="primary"
+              >
+                Follow on Instagram
+              </Button>
+            </div>
+          </div>
+        ) : (
+          <div className="grid md:grid-cols-2 gap-8">
+            {upcomingEvents.map((event, index) => (
+              <motion.div
+                key={event.title + event.date}
+                className="bg-white rounded-xl border-2 border-ink overflow-hidden"
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: false, amount: 0.3 }}
+                whileHover={{ y: -4, boxShadow: "6px 6px 0 0 #004669" }}
+                style={{ boxShadow: "4px 4px 0 0 #004669" }}
+                transition={{ duration: 0.5, delay: (index % 2) * 0.1 }}
+              >
+                <div className="w-full h-64 overflow-hidden bg-cream border-b-2 border-ink">
+                  <img
+                    src={event.image}
+                    alt={event.title}
+                    className="w-full h-64 object-cover"
+                  />
+                </div>
+                <div className="p-6">
+                  <h3 className="text-xl font-bold mb-2 text-ink">{event.title}</h3>
+                  <p className="text-denim font-bold mb-4">
+                    {formatDate(event.date, event.time)}
+                  </p>
+                  <p className="mb-6 text-ink/70">{event.description}</p>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        )}
       </div>
 
-      {/* Regular Events */}
+      {/* Past Events archive */}
       <div>
         <h2 className="font-heading text-2xl mb-6 text-ink">Past Events</h2>
-        <div className="grid md:grid-cols-3 gap-6">
-          {regularEvents.map((event, index) => (
-            <motion.div
-              key={index}
-              className="bg-white rounded-xl border-2 border-ink overflow-hidden"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: false, amount: 0.3 }}
-              whileHover={{ y: -4, boxShadow: "6px 6px 0 0 #004669" }}
-              style={{ boxShadow: "3px 3px 0 0 #004669" }}
-              transition={{ duration: 0.5, delay: (index % 3) * 0.08 }}
+
+        {/* Search + year filter */}
+        <div className="flex flex-col sm:flex-row gap-3 mb-8">
+          <div className="relative flex-1">
+            <Search
+              className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-ink/50"
+              aria-hidden="true"
+            />
+            <input
+              type="search"
+              value={search}
+              onChange={(e) => setSearch(e.target.value)}
+              placeholder="Search past events..."
+              aria-label="Search past events"
+              className="w-full pl-9 pr-4 py-2.5 rounded-lg border-2 border-ink bg-white text-ink placeholder:text-ink/40 focus-visible:outline focus-visible:outline-2 focus-visible:outline-denim focus-visible:outline-offset-2"
+            />
+          </div>
+          <div className="flex flex-wrap gap-2">
+            <button
+              onClick={() => setSelectedYear("All")}
+              aria-pressed={selectedYear === "All"}
+              className={`px-4 py-2 rounded-lg font-bold text-sm border-2 transition-colors duration-150 ${
+                selectedYear === "All"
+                  ? "bg-lightyellow text-ink border-ink"
+                  : "bg-white text-ink/70 border-ink/20 hover:border-ink"
+              }`}
             >
-              <div className="w-full h-48 overflow-hidden bg-cream border-b-2 border-ink">
-                <img
-                  src={event.image}
-                  alt={event.title}
-                  className="w-full h-64 object-cover"
-                />
-              </div>
-              <div className="p-4">
-                <h3 className="text-lg font-bold mb-1 text-ink">{event.title}</h3>
-                <p className="text-denim font-bold mb-2">{event.date}</p>
-                <p className="text-sm mb-4 line-clamp-3 text-ink/70">{event.description}</p>
-              </div>
-            </motion.div>
-          ))}
+              All Years
+            </button>
+            {years.map((year) => (
+              <button
+                key={year}
+                onClick={() => setSelectedYear(year)}
+                aria-pressed={selectedYear === year}
+                className={`px-4 py-2 rounded-lg font-bold text-sm border-2 transition-colors duration-150 ${
+                  selectedYear === year
+                    ? "bg-lightyellow text-ink border-ink"
+                    : "bg-white text-ink/70 border-ink/20 hover:border-ink"
+                }`}
+              >
+                {year}
+              </button>
+            ))}
+          </div>
         </div>
+
+        {eventsByYear.length === 0 ? (
+          <div className="bg-white rounded-xl border-2 border-ink p-8 text-center shadow-[4px_4px_0_0_#004669]">
+            <p className="text-ink/70">
+              No past events match “{search}”{selectedYear !== "All" ? ` in ${selectedYear}` : ""}.
+            </p>
+          </div>
+        ) : (
+          eventsByYear.map(([year, yearEvents]) => (
+            <div key={year} className="mb-12">
+              <h3 className="font-heading text-xl text-ink mb-4 border-b-2 border-ink/15 pb-2">
+                {year}
+              </h3>
+              <div className="grid md:grid-cols-3 gap-6">
+                {yearEvents.map((event, index) => (
+                  <motion.div
+                    key={event.title + event.date}
+                    className="bg-white rounded-xl border-2 border-ink overflow-hidden"
+                    initial={{ opacity: 0, y: 30 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: false, amount: 0.3 }}
+                    whileHover={{ y: -4, boxShadow: "6px 6px 0 0 #004669" }}
+                    style={{ boxShadow: "3px 3px 0 0 #004669" }}
+                    transition={{ duration: 0.5, delay: (index % 3) * 0.08 }}
+                  >
+                    <div className="w-full h-48 overflow-hidden bg-cream border-b-2 border-ink">
+                      <img
+                        src={event.image}
+                        alt={event.title}
+                        className="w-full h-64 object-cover"
+                      />
+                    </div>
+                    <div className="p-4">
+                      <h3 className="text-lg font-bold mb-1 text-ink">{event.title}</h3>
+                      <p className="text-denim font-bold mb-2">
+                        {formatDate(event.date, event.time)}
+                      </p>
+                      <p className="text-sm mb-4 line-clamp-3 text-ink/70">
+                        {event.description}
+                      </p>
+                    </div>
+                  </motion.div>
+                ))}
+              </div>
+            </div>
+          ))
+        )}
       </div>
     </div>
   );
