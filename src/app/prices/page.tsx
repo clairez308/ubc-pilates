@@ -33,7 +33,8 @@ export default function PricesPage() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2, duration: 0.6 }}
         >
-          Choose the plan that fits your Pilates journey!
+          With a membership, get free access to all our classes, exclusive
+          socials, raffles &amp; contests, merch deals, online content, and more!
         </motion.p>
         <motion.p
           className="text-sm text-ink/50 max-w-3xl mx-auto mt-3"
@@ -41,118 +42,119 @@ export default function PricesPage() {
           animate={{ opacity: 1 }}
           transition={{ delay: 0.3, duration: 0.6 }}
         >
-          Payment can be made in-person (cash/credit) or through Bounce.
+          Classes start September 21st. 
         </motion.p>
-        <div className="mt-5 flex justify-center">
+        <div className="mt-5 flex flex-wrap justify-center gap-3">
           <Button
-            href="https://www.bouncelife.com/organizations/66e09dfa67d86b2c13b88831?membership-required=false"
+            href="https://www.showpass.com/discounted-membership/"
             variant="primary"
           >
-            Go Premium
+            Buy a Membership
+          </Button>
+          <Button
+            href="https://www.bouncelife.com/organizations/66e09dfa67d86b2c13b88831?membership-required=false"
+            variant="secondary"
+          >
+            Book a Drop-In Class
           </Button>
         </div>
       </div>
 
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid md:grid-cols-2 gap-8 mb-12">
-          {/* No Membership */}
+        {/* Back to School Offer */}
+        <Card accent="yellow" className="bg-skyblue mb-8">
+          <div className="flex flex-wrap items-center justify-center gap-2 mb-2">
+            <h3 className="text-xl font-bold text-center text-ink">
+              Back to School Membership Offer
+            </h3>
+            <span className="bg-lightyellow text-ink text-xs font-bold px-3 py-1 rounded-full border-2 border-ink">
+              SEPT 8 – SEPT 25
+            </span>
+          </div>
+          <p className="text-center text-ink/70 text-sm">
+            Save on Annual &amp; Term memberships for a limited time — prices
+            below reflect the discount.
+          </p>
+        </Card>
+
+        <div className="grid md:grid-cols-3 gap-8 mb-8">
+          {/* Annual Membership */}
           <Card accent="blue">
             <h3 className="text-2xl font-bold text-center mb-6 text-ink">
-              No Membership
+              Annual Membership
             </h3>
-            <div className="space-y-4">
-              <div className="bg-cream p-4 rounded-lg border-2 border-ink/10">
-                <p className="text-denim font-black text-xl mb-3">
-                  $10 per class
-                </p>
-                <ul className="space-y-2 text-sm">
-                  <CheckItem>First-timers get their first class for free</CheckItem>
-                </ul>
-              </div>
+            <div className="bg-cream p-4 rounded-lg border-2 border-ink/10">
+              <p className="text-center mb-3">
+                <span className="text-ink/40 line-through text-lg mr-2">$65</span>
+                <span className="text-denim font-black text-xl">$55</span>
+              </p>
+              <ul className="space-y-2 text-sm">
+                <CheckItem>Valid for the entire 2026–2027 school year (Term 1 &amp; Term 2)</CheckItem>
+                <CheckItem><strong>Free access to all our classes</strong></CheckItem>
+                <CheckItem>Exclusive socials, raffles &amp; contests</CheckItem>
+                <CheckItem>Merch deals &amp; online content</CheckItem>
+              </ul>
             </div>
           </Card>
 
-          {/* Regular Membership */}
-          <Card accent="yellow" delay={0.1}>
+          {/* Term Membership */}
+          <Card accent="blue" delay={0.1}>
             <h3 className="text-2xl font-bold text-center mb-6 text-ink">
-              Regular Membership
+              Term Membership
             </h3>
-            <div className="space-y-4">
-              <div className="bg-cream p-4 rounded-lg border-2 border-ink/10">
-                <h4 className="font-bold text-lg mb-1 text-ink">Annual: $35</h4>
-                <h4 className="font-bold text-lg mb-3 text-ink">Term: $25</h4>
-                <ul className="space-y-2 text-sm">
-                  <CheckItem>Discounted class fees of $5 (on top of the base fee)</CheckItem>
-                  <CheckItem>Entered into our term raffles (1 entry)</CheckItem>
-                </ul>
-              </div>
+            <div className="bg-cream p-4 rounded-lg border-2 border-ink/10">
+              <p className="text-center mb-3">
+                <span className="text-ink/40 line-through text-lg mr-2">$45</span>
+                <span className="text-denim font-black text-xl">$40</span>
+              </p>
+              <ul className="space-y-2 text-sm">
+                <CheckItem>Only joining us for one term? Get all the same perks for Term 1</CheckItem>
+                <CheckItem><strong>Free access to all our classes</strong></CheckItem>
+                <CheckItem>Exclusive socials, raffles &amp; contests</CheckItem>
+                <CheckItem>Merch deals &amp; online content</CheckItem>
+              </ul>
             </div>
           </Card>
 
-          {/* Premium Membership */}
-          <Card
-            accent="yellow"
-            delay={0.2}
-            className="bg-skyblue md:col-span-2"
+          {/* Drop-In */}
+          <Card accent="yellow" delay={0.2}>
+            <h3 className="text-2xl font-bold text-center mb-6 text-ink">
+              Drop-In
+            </h3>
+            <div className="bg-cream p-4 rounded-lg border-2 border-ink/10">
+              <p className="text-denim font-black text-xl text-center mb-3">
+                $7 per class
+              </p>
+              <ul className="space-y-2 text-sm">
+                <CheckItem>No membership required</CheckItem>
+                <CheckItem>First-timers get their first class for free</CheckItem>
+              </ul>
+            </div>
+          </Card>
+        </div>
+
+        {/* Membership Form PSA */}
+        <Card hover={false} className="bg-white mb-12">
+          <h3 className="text-xl font-bold text-ink mb-2">
+            Important: Complete Your Membership Form
+          </h3>
+          <p className="text-ink/70 mb-4">
+            After purchasing a membership, you&apos;ll receive a Google Form by
+            email — you must complete it in order to join our classes. This
+            form is also available on our Linktree.
+          </p>
+          <a
+            href="https://docs.google.com/forms/d/e/1FAIpQLSfneiLpCq5vGm5yfdxBgTGuDl3jQNBwNoVeaqN2hTjEK7IwPA/viewform"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="block bg-cream hover:bg-lightyellow/30 p-4 rounded-lg border-2 border-ink/15 hover:border-ink transition-colors duration-150"
           >
-            <div className="flex items-center justify-center gap-2 mb-6">
-              <h3 className="text-2xl font-bold text-center text-ink">
-                Premium Membership
-              </h3>
-              <span className="bg-lightyellow text-ink text-xs font-bold px-3 py-1 rounded-full border-2 border-ink">
-                BEST VALUE
-              </span>
-            </div>
-            <div className="bg-white p-6 rounded-lg border-2 border-ink/10">
-              <div className="text-center mb-4">
-                <h4 className="font-black text-xl text-ink mb-1">
-                  Annual: $65 | Term: $45
-                </h4>
-              </div>
-              <div className="grid md:grid-cols-2 gap-4 text-ink">
-                <ul className="space-y-2 text-sm">
-                  <CheckItem><strong>All classes included</strong> (no additional fees)</CheckItem>
-                  <CheckItem>Attend social events for <strong>heavily discounted prices/free</strong></CheckItem>
-                  <CheckItem>Entered into term raffles <strong>(2 entries)</strong></CheckItem>
-                  <CheckItem>Access to <strong>exclusive contests and rewards</strong></CheckItem>
-                </ul>
-                <ul className="space-y-2 text-sm">
-                  <CheckItem>Eligible for <strong>care packages and sponsorship goodies</strong></CheckItem>
-                </ul>
-              </div>
-            </div>
-          </Card>
-        </div>
-      </div>
-
-      {/* Features Section */}
-      <div className="mb-20">
-        <h2 className="font-heading text-3xl text-center text-ink mb-12 tracking-tight">
-          Extra Info
-        </h2>
-
-        <div className="grid md:grid-cols-2 gap-8 mb-12">
-          {/* First Class Free */}
-          <Card accent="blue">
-            <h3 className="text-xl font-bold text-ink mb-4">First Class Free</h3>
-            <p className="text-ink/70">
-              Everyone is welcome to attend their first UBC Pilates class
-              absolutely free of charge! The only requirement is to enjoy
-              yourself :) (& make sure you snag your ticket on bounce first!)
+            <h4 className="font-bold text-ink mb-1">Membership Form</h4>
+            <p className="text-sm text-ink/60">
+              Fill this out after purchasing your membership
             </p>
-          </Card>
-
-          {/* Members Access */}
-          <Card accent="yellow" delay={0.1}>
-            <h3 className="text-xl font-bold text-ink mb-4">Member Benefits</h3>
-            <p className="text-ink/70 mb-2">All members enjoy:</p>
-            <ul className="space-y-2 text-ink/80">
-              <CheckItem><strong>Members-only online community</strong> with early access to announcements</CheckItem>
-              <CheckItem><strong>Close friends access</strong> on Instagram for BTS content</CheckItem>
-              <CheckItem><strong>Monthly care packages</strong> and giveaways (limited)</CheckItem>
-            </ul>
-          </Card>
-        </div>
+          </a>
+        </Card>
       </div>
 
       {/* Group Services */}
