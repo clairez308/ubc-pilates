@@ -295,6 +295,14 @@ const partners = [
     description: "RAW Nutritional offers high-quality and nutrient-dense plant-based protein for your health journey.",
     link: "https://rawnutritional.com/",
   },
+  {
+    id: 34,
+    name: "Bareballs",
+    logo: "/sponsors/bareballs.png",
+    featured: true,
+    description: "Barebells is a Swedish brand that offers high-protein snacks and beverages, perfect for fitness enthusiasts.",
+    link: "https://barebells.ca/?srsltid=AfmBOoo-I5b8c4se3taAcf2846OwAOxC5ubWQr93fr9KvvVKKNT0Mcim",
+  },
 
   
 ];
