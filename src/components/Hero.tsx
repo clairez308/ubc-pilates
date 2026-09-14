@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import Stack from "./Stack";
 import CardSwap, { Card } from "./CardSwap";
 import RollingGallery from "./RollingGallery";
-import FreeClasses from "./FreeClasses";
+import ClassSchedule from "./ClassSchedule";
 import Button from "./ui/Button";
 
 const retreatImages = [
@@ -99,7 +99,9 @@ const Hero = () => {
         </div>
       </div>
 
-      <FreeClasses />
+      <section className="relative py-16 sm:py-20 bg-lightyellow border-y-2 border-ink overflow-hidden">
+        <ClassSchedule />
+      </section>
 
       {/* Features Section - Split Layout */}
       <section className="relative py-16 sm:py-20 lg:py-24 bg-skyblue border-y-2 border-ink overflow-hidden">
