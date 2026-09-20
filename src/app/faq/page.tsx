@@ -41,6 +41,25 @@ const faqItems = [
     answer:
       "Of course! We welcome all drop ins - see the Prices page for cost for non-members.",
   },
+  {
+    id: 7,
+    question: "Is there a free week?",
+    answer:
+      "Yes! We're hosting a free week from September 21st to 25th, so come try out a class before committing to a membership.",
+  },
+  {
+    id: 8,
+    question: "What are your class policies?",
+    answer:
+      "No need to bring your own mat - we provide them at every class. Classes and physical membership cards are first come, first served, so arrive early to guarantee a spot, especially since room capacity is limited. All membership and drop-in purchases are final and non-refundable.",
+  },
+  {
+    id: 9,
+    question: "How do I get to our classes?",
+    answer:
+      "All our classes are held in the UBC Life Building (6138 Student Union Blvd, Vancouver, BC V6T 1Z1), in room Life 26 or Life 5 depending on the day - check the Class Schedule for the exact room and time. Life 26 fits up to 50 people, while Life 5 fits 30-60 depending on the layout.",
+    map: true,
+  },
 ];
 
 export default function FaqPage() {
@@ -116,6 +135,29 @@ export default function FaqPage() {
                       <p className="text-ink/70 leading-relaxed">
                         {item.answer}
                       </p>
+                      {"map" in item && item.map && (
+                        <div className="mt-4">
+                          <div className="w-full aspect-video rounded-lg overflow-hidden border-2 border-ink">
+                            <iframe
+                              src="https://www.google.com/maps?q=UBC+Life+Building,+6138+Student+Union+Blvd,+Vancouver,+BC+V6T+1Z1&output=embed"
+                              width="100%"
+                              height="100%"
+                              style={{ border: 0 }}
+                              loading="lazy"
+                              referrerPolicy="no-referrer-when-downgrade"
+                              title="Map to the UBC Life Building"
+                            />
+                          </div>
+                          <a
+                            href="https://www.google.com/maps/search/?api=1&query=UBC+Life+Building+6138+Student+Union+Blvd+Vancouver+BC+V6T+1Z1"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-block mt-2 text-sm font-bold text-denim hover:underline"
+                          >
+                            Get directions →
+                          </a>
+                        </div>
+                      )}
                     </div>
                   </motion.div>
                 )}
