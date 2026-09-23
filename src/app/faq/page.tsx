@@ -50,8 +50,17 @@ const faqItems = [
   {
     id: 8,
     question: "What are your class policies?",
-    answer:
-      "No need to bring your own mat - we provide them at every class. Classes and physical membership cards are first come, first served, so arrive early to guarantee a spot, especially since room capacity is limited. All membership and drop-in purchases are final and non-refundable.",
+    answer: (
+      <ol className="list-decimal pl-5 space-y-2">
+        <li>Please arrive <strong>at least 5-10 minutes</strong> before class starts.</li>
+        <li>Be sure you&apos;ve completed the <strong>Membership Google Form</strong> (link in IG bio).</li>
+        <li>Have your <strong>Showpass Member QR code</strong> ready to be scanned.</li>
+        <li>In order to not disrupt the ongoing class, we will <strong>not</strong> allow attendees to join after 10 minutes.</li>
+        <li>&ldquo;<strong>First Class Free</strong>&rdquo; Pass can be used for any <strong>general class</strong> (not including themed classes, collaboration classes, or special events/socials).</li>
+        <li>Drop-ins must pay fee <strong>via e-transfer</strong> (jaylenechih@gmail.com) <strong>and</strong> complete the <strong>AMS Waiver</strong> (link in IG bio).</li>
+        <li>Wear whatever is comfortable &amp; bring water! Mats and any other equipment are provided :)</li>
+      </ol>
+    ),
   },
   {
     id: 9,
@@ -132,9 +141,9 @@ export default function FaqPage() {
                   >
                     <div className="px-6 pb-6 pt-2 border-t-2 border-ink/10">
                       <div className="w-16 h-1.5 bg-denim rounded-full mb-4 mt-4"></div>
-                      <p className="text-ink/70 leading-relaxed">
+                      <div className="text-ink/70 leading-relaxed">
                         {item.answer}
-                      </p>
+                      </div>
                       {"map" in item && item.map && (
                         <div className="mt-4">
                           <div className="w-full aspect-video rounded-lg overflow-hidden border-2 border-ink">

@@ -127,7 +127,21 @@ export default function PricesPage() {
               </p>
               <ul className="space-y-2 text-sm">
                 <CheckItem>No membership required</CheckItem>
-                <CheckItem>First-timers get their first class for free</CheckItem>
+                <CheckItem>
+                  First-timers get their first class for free (valid for
+                  general classes only — not themed classes, collaborations,
+                  or special events/socials)
+                </CheckItem>
+                <CheckItem>
+                  Pay via e-transfer to{" "}
+                  <a
+                    href="mailto:jaylenechih@gmail.com"
+                    className="font-bold text-denim hover:underline"
+                  >
+                    jaylenechih@gmail.com
+                  </a>{" "}
+                  and complete the Membership Form (linked below)
+                </CheckItem>
               </ul>
             </div>
           </Card>
