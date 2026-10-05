@@ -46,7 +46,7 @@ export default function PricesPage() {
         </motion.p>
         <div className="mt-5 flex flex-wrap justify-center gap-3">
           <Button
-            href="https://www.showpass.com/discounted-membership/"
+            href="https://www.showpass.com/membership-8/"
             variant="primary"
           >
             Buy a Membership
@@ -69,7 +69,7 @@ export default function PricesPage() {
             </h3>
             <div className="bg-cream p-4 rounded-lg border-2 border-ink/10">
               <p className="text-center mb-3">
-                <span className="text-denim font-black text-xl">$55</span>
+                <span className="text-denim font-black text-xl">$65</span>
               </p>
               <ul className="space-y-2 text-sm">
                 <CheckItem>Valid for the entire 2026–2027 school year (Term 1 &amp; Term 2)</CheckItem>
@@ -87,7 +87,7 @@ export default function PricesPage() {
             </h3>
             <div className="bg-cream p-4 rounded-lg border-2 border-ink/10">
               <p className="text-center mb-3">
-                <span className="text-denim font-black text-xl">$40</span>
+                <span className="text-denim font-black text-xl">$45</span>
               </p>
               <ul className="space-y-2 text-sm">
                 <CheckItem>Only joining us for one term? Get all the same perks for Term 1</CheckItem>
@@ -115,14 +115,14 @@ export default function PricesPage() {
                   or special events/socials)
                 </CheckItem>
                 <CheckItem>
-                  Pay via e-transfer to{" "}
                   <a
-                    href="mailto:jaylenechih@gmail.com"
+                    href="https://docs.google.com/forms/d/e/1FAIpQLSfJP8mrN-y7q3SwApruxzFZkMohf_T_BmaROLO1iXjixukZjw/viewform"
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="font-bold text-denim hover:underline"
                   >
-                    jaylenechih@gmail.com
-                  </a>{" "}
-                  and complete the Membership Form (linked below)
+                    Complete the Sign-In Form
+                  </a>
                 </CheckItem>
               </ul>
             </div>
