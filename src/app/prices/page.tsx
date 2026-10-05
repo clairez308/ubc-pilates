@@ -61,22 +61,6 @@ export default function PricesPage() {
       </div>
 
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Back to School Offer */}
-        <Card accent="yellow" className="bg-skyblue mb-8">
-          <div className="flex flex-wrap items-center justify-center gap-2 mb-2">
-            <h3 className="text-xl font-bold text-center text-ink">
-              Back to School Membership Offer
-            </h3>
-            <span className="bg-lightyellow text-ink text-xs font-bold px-3 py-1 rounded-full border-2 border-ink">
-              SEPT 8 – SEPT 25
-            </span>
-          </div>
-          <p className="text-center text-ink/70 text-sm">
-            Save on Annual &amp; Term memberships for a limited time — prices
-            below reflect the discount.
-          </p>
-        </Card>
-
         <div className="grid md:grid-cols-3 gap-8 mb-8">
           {/* Annual Membership */}
           <Card accent="blue">
@@ -85,7 +69,6 @@ export default function PricesPage() {
             </h3>
             <div className="bg-cream p-4 rounded-lg border-2 border-ink/10">
               <p className="text-center mb-3">
-                <span className="text-ink/40 line-through text-lg mr-2">$65</span>
                 <span className="text-denim font-black text-xl">$55</span>
               </p>
               <ul className="space-y-2 text-sm">
@@ -104,7 +87,6 @@ export default function PricesPage() {
             </h3>
             <div className="bg-cream p-4 rounded-lg border-2 border-ink/10">
               <p className="text-center mb-3">
-                <span className="text-ink/40 line-through text-lg mr-2">$45</span>
                 <span className="text-denim font-black text-xl">$40</span>
               </p>
               <ul className="space-y-2 text-sm">
