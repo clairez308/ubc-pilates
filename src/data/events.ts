@@ -13,6 +13,122 @@ export interface ClubEvent {
 // Events" until its date passes, then it moves itself to "Past Events".
 export const events: ClubEvent[] = [
   {
+    title: "Bring Your Valentine!",
+    date: "2026-02-12",
+    image: "/group/valentine.png",
+    description: "Dress code: pinks & reds. Thursday, February 12 at NEST 2301.",
+  },
+  {
+    title: "Jaybird Studio Collab",
+    date: "2026-02-28",
+    time: "2:30 PM",
+    image: "/group/jaybird.png",
+    description:
+      "Member & Exec Social at Jaybird Studio, 776 Kingsway, Vancouver. Spots limited: first 18 members to sign up.",
+  },
+  {
+    title: "UBC Pilates x Yoga Club Collab",
+    date: "2026-02-26",
+    time: "4:00 - 5:00 PM",
+    image: "/group/yoga-collab.png",
+    description:
+      "Join us at the Performance Theatre for our Yoga Club collab. Free for all members!",
+  },
+  {
+    title: "Pilates Prince & Princess",
+    date: "2026-03-03",
+    image: "/group/prince-princess.png",
+    description:
+      "Theme: pink, white & gold. Get pink goodies and princess themed (singing encouraged!) at Life 26.",
+  },
+  {
+    title: "Pilates, Plants n Paint",
+    date: "2026-03-04",
+    time: "7:30 - 8:30 PM",
+    image: "/group/plants-paint.png",
+    description:
+      "UBC Pilates Club x UBC SISU at the Performance Theatre. A pilates class followed by plant painting.",
+  },
+  {
+    title: "Pilates Powerball Workshop",
+    date: "2026-03-12",
+    image: "/group/powerball.png",
+    description:
+      "Pilates Powerball Workshop with an Exec & Member Social at the Osprey Lounge & Terrace.",
+  },
+  {
+    title: "Mamma Mia! Pilates",
+    date: "2026-03-31",
+    time: "5:00 - 6:00 PM",
+    image: "/group/mamma-mia.png",
+    description:
+      "Here we core again! Drinks by poppi at Life 26.",
+  },
+  {
+    title: "Patty’s Pilates",
+    date: "2026-03-16",
+    time: "5:00 - 6:00 PM",
+    image: "/group/pattys-pilates.png",
+    description:
+      "Theme: green & gold. Members only, at Life 26.",
+  },
+  {
+    title: "UBC Muay Thai x Pilates",
+    date: "2026-03-18",
+    time: "7:15 - 8:45 PM",
+    image: "/group/muaythai-2026.png",
+    description:
+      "45 minutes of pilates followed by 45 minutes of muay thai.",
+  },
+  {
+    title: "Retro Pilates",
+    date: "2026-03-25",
+    time: "7:30 - 8:30 PM",
+    image: "/group/retro-pilates.png",
+    description:
+      "Instructor: Maggie. Location: Performance Theatre.",
+  },
+  {
+    title: "Puppy Pilates",
+    date: "2026-03-31",
+    time: "10:30 - 11:30 AM & 11:30 AM - 12:30 PM",
+    image: "/group/puppy-pilates.png",
+    description:
+      "UBC Pilates x poppi x HEAL at the Performance Theatre, AMS Nest. Two sessions.",
+  },
+  {
+    title: "Spring Reset",
+    date: "2026-04-01",
+    time: "1:30 - 3:00 PM",
+    image: "/group/spring-reset.png",
+    description:
+      "UBC Pilates Club x AMS Barista Club x UBC Meditation Community. An afternoon of matcha, movement & mindfulness at the AMS Performance Theatre.",
+  },
+  {
+    title: "Hot-lates Summer Send-Off",
+    date: "2026-04-10",
+    time: "4:30 - 5:30 PM",
+    image: "/group/hot-lates.png",
+    description:
+      "Instructor: Romina. Location: NEST 2301.",
+  },
+  {
+    title: "Bunny Pilates x CVC",
+    date: "2026-09-22",
+    time: "12:05 - 3:00 PM",
+    image: "/group/bunny-cvc.png",
+    description:
+      "UBC Pilates x CVC bunny class at the Performance Theatre.",
+  },
+  {
+    title: "UBC Pilates x UBC Ballet Club: Ballet & Bend",
+    date: "2026-10-21",
+    time: "6:30 - 7:30 PM",
+    image: "/group/ballet-bend.png",
+    description:
+      "30 minutes of pilates and 30 minutes of ballet. Members free, non-members $10.",
+  },
+  {
     title: "UBC Pilates x WiDS @ UBC: Galentine’s",
     date: "2026-02-04",
     time: "7:30 - 8:30 PM",
