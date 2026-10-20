@@ -38,15 +38,15 @@ const teamMembers: TeamMember[] = [
   {
     name: "Romina Barnes",
     role: "Co-President",
-    image: "/team/romina.jpg",
+    image: "/team/romina.jpeg",
     department: "co-presidents",
     description:
       "Meet Romina! She is in her second year of neuroscience and is a big fan of Blue Chip's dirty iced matcha latte. If she's not napping, you can catch her outdoors or reading a book.",
   },
   {
-    name: "Amany",
+    name: "Amany Lakssili",
     role: "Co-President",
-    image: "/team/amany.jpg",
+    image: "/team/amany.jpeg",
     department: "co-presidents",
     description:
       "My name is Amany, and I am the co-president of UBC pilates club this year! I am in my first year of pharmacy school. I love pilates because it can get me out of my head and is so much fun!",
@@ -56,7 +56,7 @@ const teamMembers: TeamMember[] = [
     role: "VP Finance",
     image: "/team/jaylene.jpg",
     department: "finance",
-    description: "",
+    description: "Jaylene, Year 4, Accounting, pilates is a community where you get to feel good inside and out :)",
   },
   {
     name: "Athene Fox",
@@ -72,7 +72,7 @@ const teamMembers: TeamMember[] = [
     image: "/team/jaden.avif",
     department: "internal",
     description:
-      "Hi! My name's Jaden, I'm going into my third year as a psychology major. I'm so excited to be back with the club this year. Hit me up with any new food reccs and I'll see you in class!!",
+      "Hi!! I'm Jaden, I'm a 4th year psych student and this is my 3rd year with the Pilates Club :scream: I originally joined because of the accessibility of classes but fell in love with the community :light_blue_heart: Hope to see you in class!!",
   },
   {
     name: "Anagha Khanna",
@@ -99,22 +99,22 @@ const teamMembers: TeamMember[] = [
   {
     name: "Yuly Topp",
     role: "VP External - Collaborations",
-    image: "/team/yuly.jpg",
+    image: "/team/yuly.jpeg",
     department: "collabs",
     description: "I’m the VP of External and a third-year Social Work student. I love how Pilates strengthens both the body and mind. A fun fact about me is that I have a one eyed cat.",
   },
   {
     name: "Armita Bagheri",
     role: "AVP External - Collaborations",
-    image: "/team/armita.jpg",
+    image: "/team/armita.jpeg",
     department: "collabs",
     description:
-      "Hi everyone, I'm Armita! I’m going into my second year, majoring in neuroscience. Some of my favourite hobbies are playing the piano, playing volleyball, and of course doing pilates!!",
+      "Hi! I’m Armita, a third-year Neuroscience student. I got into Pilates in my first year and have loved it ever since. I love having a fun way to stay active, while being part of such a kind community. As part of the External Team, I get to plan exciting collaborative events with other UBC clubs!",
   },
   {
     name: "Aarya Gill",
     role: "AVP External - Collaborations",
-    image: "/team/aarya.jpg",
+    image: "/team/aarya.jpeg",
     department: "collabs",
     description:
       "I’m Aarya, a second-year Food, Nutrition and Health student at UBC! I’ve always loved Pilates because it’s a fun way to stay active, relieve stress, and prioritize both physical and mental well-being.",
@@ -130,7 +130,7 @@ const teamMembers: TeamMember[] = [
   {
     name: "Jia Mehra",
     role: "AVP External - Sponsorships",
-    image: "/team/jia.jpg",
+    image: "/team/jia.jpeg",
     department: "sponsorships",
     description:
       "Hi! I'm Jia, a third-year Psychology and B+MM student at UBC and your AVP External (Sponsorships) for this year! Pilates Club has given me a real sense of community at UBC.",
@@ -138,7 +138,7 @@ const teamMembers: TeamMember[] = [
   {
     name: "Angel Xu",
     role: "AVP External - Sponsorships",
-    image: "/team/angel.jpg",
+    image: "/team/angel.jpeg",
     department: "sponsorships",
     description: "",
   },
@@ -153,7 +153,7 @@ const teamMembers: TeamMember[] = [
   {
     name: "Tashi Leung",
     role: "Co-VP Marketing",
-    image: "/team/tashi.jpg",
+    image: "/team/tashi.jpeg",
     department: "marketing",
     description: "",
   },
@@ -162,7 +162,7 @@ const teamMembers: TeamMember[] = [
     role: "Visual Media Director",
     image: "/team/emily.jpg",
     department: "marketing",
-    description: "",
+    description: "Name: Emily; Year: 3rd, Media Studies; Why Pilates: I joined Pilates Club as a way to get more involved in the UBC community and to meet new people!",
   },
   {
     name: "Sanchi Shorewala",
@@ -177,14 +177,14 @@ const teamMembers: TeamMember[] = [
     role: "Content Creator",
     image: "/team/elyza.jpg",
     department: "marketing",
-    description: "",
+    description: "My name is Elyza! I am in second year planning to major in marketing at Sauder. I joined the UBC Pilates club ecec team because combines my passion for creating community and my love for pilates/being active!!",
   },
   {
     name: "Nadia Earn",
     role: "Content Creator",
     image: "/team/nadia.jpg",
     department: "marketing",
-    description: "",
+    description: "Hi everyone, i'm nadia and I'm a 3rd year in kinesiology. I joined pilates this year because I love to stay active, especially with activities that involve music and creative expression. a fun fact about me is that i'm on ubc’s cheer team! don't be afraid to come say hi if you ever see me on the field or at courtside!",
   },
   {
     name: "Nora Lee",
@@ -291,7 +291,7 @@ const teamMembers: TeamMember[] = [
     role: "Junior Pilates Instructor",
     image: "/team/lillian.jpg",
     department: "instructors",
-    description: "",
+    description: "Hiii everyone! My name is Lillian, I'm a 2nd year in Mining Engineering, and I'm from New Brunswick! I started going to Pilates last year because it was a super fun environment and a good break from my studies. I chose to start teaching this year because I wanted to give back to our members what Pilates gave me!",
   },
   {
     name: "Arneet Brar",
