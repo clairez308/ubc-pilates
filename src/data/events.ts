@@ -12,6 +12,18 @@ export interface ClubEvent {
 // page sorts and groups them automatically. An event shows under "Upcoming
 // Events" until its date passes, then it moves itself to "Past Events".
 export const events: ClubEvent[] = [
+    {
+    title: "Spooky Pilates!",
+    date: "2026-10-29",
+    image: "/group/spooky.png",
+    description: "No Tricks, Just Treats & Pilates! 🎃🕸️",
+  },
+  {
+    title: "Pilates & Pumpkin Painting",
+    date: "2026-10-28",
+    image: "/group/pumpkin.png",
+    description: "We’re teaming up with UBC SISU for a cozy fall-themed Pilates session followed by some pumpkin painting!! 🍂",
+  },
   {
     title: "Bring Your Valentine!",
     date: "2026-02-12",
